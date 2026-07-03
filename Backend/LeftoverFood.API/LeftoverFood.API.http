@@ -1,0 +1,6 @@
+@LeftoverFood.API_HostAddress = http://localhost:5194
+
+GET {{LeftoverFood.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

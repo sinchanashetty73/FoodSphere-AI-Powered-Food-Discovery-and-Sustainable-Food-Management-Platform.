@@ -1,0 +1,26 @@
+.donation-admin{
+  padding:40px;
+}
+
+.donations-card{
+  background:#1a0318;
+  color:#f0e3e3;
+  border-radius:15px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.donations-card button{
+  margin-right:10px;
+  padding:10px 15px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#ff6b35;
+  color:white;
+}
+.donation-card h2,
+.donation-card p{
+  color:#000;
+}

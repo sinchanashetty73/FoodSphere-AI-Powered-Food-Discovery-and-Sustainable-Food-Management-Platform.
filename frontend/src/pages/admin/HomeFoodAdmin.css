@@ -1,0 +1,127 @@
+
+
+.homefood-admin{
+  min-height:100vh;
+  background:rgb(35, 26, 32);
+  padding:40px;
+  color:white;
+}
+
+.homefood-header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.homefood-header h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.homefood-header p{
+  color:#c7c7c7;
+}
+
+.add-food-card{
+  background:#1a0318;
+  padding:30px;
+  border-radius:20px;
+  margin-bottom:40px;
+}
+
+.add-food-card h2{
+  margin-bottom:20px;
+}
+
+.add-food-card input,
+.add-food-card textarea{
+  width:100%;
+  padding:15px;
+  margin-bottom:15px;
+  border:none;
+  border-radius:12px;
+  font-size:15px;
+}
+
+.add-food-card textarea{
+  height:120px;
+}
+
+.add-food-card button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#ff7a30;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.food-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(350px,1fr));
+  gap:25px;
+}
+
+.food-card{
+  background:#1a0318;
+  border-radius:20px;
+  overflow:hidden;
+  padding:20px;
+}
+
+.food-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:15px;
+  margin-bottom:15px;
+}
+
+.food-card h3{
+  color:#ffb347;
+  margin-bottom:10px;
+}
+
+.food-card p{
+  margin:8px 0;
+}
+
+.food-card input{
+  width:100%;
+  padding:12px;
+  margin-bottom:10px;
+  border:none;
+  border-radius:10px;
+}
+
+.food-actions{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+}
+
+.edit-btn{
+  flex:1;
+  background:#ff9800;
+}
+
+.save-btn{
+  flex:1;
+  background:#28a745;
+}
+
+.delete-btn{
+  flex:1;
+  background:#dc3545;
+}
+
+.food-actions button{
+  border:none;
+  color:white;
+  padding:12px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}

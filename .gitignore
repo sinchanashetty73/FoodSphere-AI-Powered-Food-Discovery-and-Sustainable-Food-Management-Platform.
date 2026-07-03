@@ -1,0 +1,66 @@
+# =====================
+# FRONTEND (React)
+# =====================
+
+frontend/node_modules/
+node_modules/
+
+frontend/.env
+.env
+*.env
+
+frontend/build/
+frontend/dist/
+
+
+# =====================
+# BACKEND (.NET)
+# =====================
+
+**/bin/
+**/obj/
+
+
+# =====================
+# ASP.NET SECRET FILES
+# =====================
+
+Backend/LeftoverFood.API/appsettings.json
+Backend/LeftoverFood.API/appsettings.Development.json
+
+
+# =====================
+# FIREBASE SECRET KEYS
+# =====================
+
+Backend/LeftoverFood.API/Firebase/
+Backend/Secrets/
+
+*-firebase-adminsdk-*.json
+serviceAccountKey.json
+
+
+# =====================
+# LOG FILES
+# =====================
+
+*.log
+
+
+# =====================
+# VISUAL STUDIO
+# =====================
+
+.vs/
+.vscode/
+
+*.user
+*.suo
+
+
+# =====================
+# OS FILES
+# =====================
+
+.DS_Store
+Thumbs.db

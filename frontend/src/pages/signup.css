@@ -1,0 +1,513 @@
+/* ===========================
+   SIGNUP PAGE
+=========================== */
+
+.signup-page{
+    position:relative;
+    overflow:hidden;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+    background:url("https://i.pinimg.com/control1/736x/7a/68/7b/7a687b86236097488cd76b0518f7f3c7.jpg")
+    center center/cover no-repeat;
+}
+
+/* Dark Overlay */
+
+.signup-page::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,20,40,.45);
+    z-index:1;
+}
+
+
+/* ===========================
+   WATER BUBBLES
+=========================== */
+
+.bubbles{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:2;
+}
+
+.bubbles span{
+    position:absolute;
+    bottom:-150px;
+    display:block;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(4px);
+
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,.8),
+        0 0 20px rgba(255,255,255,.35);
+
+    animation:floatBubble linear infinite;
+}
+
+
+/* Bubble Positions */
+
+.bubbles span:nth-child(1){
+left:5%;
+width:35px;
+height:35px;
+animation-duration:12s;
+}
+
+.bubbles span:nth-child(2){
+left:15%;
+width:65px;
+height:65px;
+animation-duration:18s;
+}
+
+.bubbles span:nth-child(3){
+left:28%;
+width:28px;
+height:28px;
+animation-duration:10s;
+}
+
+.bubbles span:nth-child(4){
+left:40%;
+width:50px;
+height:50px;
+animation-duration:15s;
+}
+
+.bubbles span:nth-child(5){
+left:52%;
+width:80px;
+height:80px;
+animation-duration:22s;
+}
+
+.bubbles span:nth-child(6){
+left:62%;
+width:30px;
+height:30px;
+animation-duration:11s;
+}
+
+.bubbles span:nth-child(7){
+left:70%;
+width:55px;
+height:55px;
+animation-duration:16s;
+}
+
+.bubbles span:nth-child(8){
+left:78%;
+width:22px;
+height:22px;
+animation-duration:8s;
+}
+
+.bubbles span:nth-child(9){
+left:85%;
+width:48px;
+height:48px;
+animation-duration:14s;
+}
+
+.bubbles span:nth-child(10){
+left:92%;
+width:72px;
+height:72px;
+animation-duration:20s;
+}
+
+.bubbles span:nth-child(11){
+left:47%;
+width:18px;
+height:18px;
+animation-duration:9s;
+}
+
+.bubbles span:nth-child(12){
+left:98%;
+width:40px;
+height:40px;
+animation-duration:13s;
+}
+
+
+/* Bubble Animation */
+
+@keyframes floatBubble{
+
+0%{
+transform:translateY(0) scale(.5);
+opacity:0;
+}
+
+15%{
+opacity:.5;
+}
+
+50%{
+opacity:.9;
+}
+
+100%{
+transform:translateY(-120vh) scale(1.5);
+opacity:0;
+}
+
+}
+
+
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.signup-container{
+
+position:relative;
+z-index:5;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+width:100%;
+max-width:1200px;
+
+gap:60px;
+
+}
+
+
+
+/* ===========================
+   LEFT CONTENT
+=========================== */
+
+.left-section{
+
+flex:1;
+
+color:white;
+
+}
+
+.left-section h1{
+
+font-size:55px;
+
+line-height:1.2;
+
+font-weight:700;
+
+margin-bottom:35px;
+
+}
+
+.signin-box{
+
+width:260px;
+
+padding:25px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.2);
+
+}
+
+.signin-box p{
+
+font-size:18px;
+
+margin-bottom:15px;
+
+}
+
+.signin-btn{
+
+display:inline-block;
+
+padding:14px 35px;
+
+border-radius:35px;
+
+text-decoration:none;
+
+font-weight:600;
+
+background:#22c55e;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.signin-btn:hover{
+
+background:#16a34a;
+
+transform:translateY(-3px);
+
+}
+
+
+
+/* ===========================
+   GLASS FORM
+=========================== */
+
+.glass-box{
+
+width:420px;
+
+padding:45px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.25);
+
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+z-index:5;
+
+}
+
+.glass-box h2{
+
+text-align:center;
+
+color:white;
+
+font-size:34px;
+
+margin-bottom:30px;
+
+}
+
+.glass-box input{
+
+width:100%;
+
+padding:16px;
+
+margin-bottom:18px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+font-size:16px;
+
+background:rgba(255,255,255,.85);
+
+transition:.3s;
+
+box-sizing:border-box;
+
+}
+
+.glass-box input:focus{
+
+transform:scale(1.02);
+
+box-shadow:0 0 10px rgba(34,197,94,.5);
+
+}
+
+
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.signup-btn{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff7b00;
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+margin-top:5px;
+
+}
+
+.signup-btn:hover{
+
+background:#ff5400;
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 25px rgba(255,84,0,.4);
+
+}
+
+
+
+/* ===========================
+   OR TEXT
+=========================== */
+
+.or-text{
+
+text-align:center;
+
+margin:22px 0;
+
+font-size:16px;
+
+color:white;
+
+}
+
+
+
+/* ===========================
+   SOCIAL ICONS
+=========================== */
+
+.social-icons{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.social-icons a{
+
+width:52px;
+
+height:52px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:22px;
+
+color:white;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(10px);
+
+transition:.3s;
+
+text-decoration:none;
+
+}
+
+.social-icons a:hover{
+
+transform:translateY(-6px) rotate(10deg);
+
+background:#22c55e;
+
+}
+
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.signup-container{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.left-section{
+
+margin-bottom:40px;
+
+}
+
+.left-section h1{
+
+font-size:38px;
+
+}
+
+.glass-box{
+
+width:100%;
+
+max-width:420px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.glass-box{
+
+padding:30px;
+
+}
+
+.left-section h1{
+
+font-size:30px;
+
+}
+
+.signin-box{
+
+width:100%;
+
+}
+
+}

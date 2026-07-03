@@ -1,0 +1,17 @@
+namespace LeftoverFood.API.Models
+{
+    public class Restaurant
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; } = string.Empty;
+
+        public string ImageUrl { get; set; } = string.Empty;
+
+        public string Location { get; set; } = string.Empty;
+
+        public double Rating { get; set; }
+
+        public string Category { get; set; }
+    }
+}

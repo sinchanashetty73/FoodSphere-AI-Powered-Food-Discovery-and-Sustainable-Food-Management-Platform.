@@ -1,0 +1,235 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #190404;
+  margin: 0;
+}
+
+.restaurant-page {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.search-wrapper {
+  width: 70%;
+  margin: 40px auto;
+  /* background: rgba(226, 215, 215, 0.08); */
+  background-color: #372626;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: 18px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(255, 140, 0, 0.12);
+
+  transition: all 0.3s ease;
+}
+
+.search-wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(255, 140, 0, 0.18);
+}
+
+.location-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #ffb347;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.divider {
+  width: 1px;
+  height: 35px;
+  background: rgba(212, 32, 32, 0.15);
+}
+
+.search-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-section span {
+  font-size: 20px;
+}
+
+.search-section input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.search-section input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-section input:focus {
+  color: #fff;
+}
+.occasion-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.occasion-navbar button {
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.occasion-navbar button:hover {
+  background-color: #1d0725;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.occasion-navbar button.active {
+  background-color: #1f0545;
+  color: white;
+  box-shadow: 0 4px 8px rgba(255, 87, 34, 0.4);
+}
+
+.occasion-navbar button:active {
+  transform: scale(0.95);
+}
+
+.restorants-menu {
+  margin-top: 20px;
+}
+
+.menu-grid {
+
+  width: 95%;
+  margin: 60px auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 25px;
+
+  justify-content: center;
+  align-items: center;
+
+}
+.menu-item {
+
+  width: 100%;
+  height: 390px;
+
+  background: #210020;
+
+  border-radius: 15px;
+
+  padding: 15px;
+
+  text-align: center;
+
+  transition: 0.3s;
+
+}
+
+.menu-item img {
+
+  width: 100%;
+
+  height: 240px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+}
+
+.menu-item h3 {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.menu-item p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.rating {
+  margin-top: 10px;
+  font-size: 22px;
+}
+.rating span {
+  color: #cfcfcf;
+  font-size: 18px;
+}
+
+.rating .filled {
+  color: #f5b301;
+}
+
+.rating .score {
+  color: #fff;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.restaurant-cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  height: 430px;
+}
+
+.birthday-cards .card {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+}
+
+@media(max-width:1600px){
+
+.menu-grid{
+
+grid-template-columns: repeat(5,1fr);
+
+}
+
+}
+
+
+@media(max-width:1300px){
+
+.menu-grid{
+
+grid-template-columns: repeat(4,1fr);
+
+}
+
+}

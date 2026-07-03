@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+.ai-page{
+min-height:100vh;
+padding:30px;
+overflow:hidden;
+position:relative;
+
+background: linear-gradient(
+135deg,
+#2c1073,
+#410e27,
+#20031f,
+#7c2d12
+);
+
+background-size:400% 400%;
+animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.ai-header{
+text-align:center;
+color:white;
+margin-bottom:30px;
+}
+
+.ai-header h1{
+font-size:3rem;
+font-weight:700;
+text-shadow:0 0 25px rgba(255,255,255,.3);
+}
+
+.ai-header p{
+margin-top:10px;
+opacity:.8;
+font-size:1.05rem;
+}
+
+.ai-container{
+display:flex;
+gap:25px;
+height:75vh;
+}
+
+.left-panel{
+width:320px;
+padding:25px;
+max-height:75vh;
+  overflow-y:auto;
+
+backdrop-filter:blur(25px);
+background:rgba(255,255,255,0.08);
+
+border:1px solid rgba(255,255,255,.15);
+border-radius:25px;
+
+color:white;
+
+box-shadow:
+0 8px 32px rgba(0,0,0,.25),
+inset 0 0 15px rgba(255,255,255,.05);
+}
+
+.left-panel h3{
+margin-bottom:20px;
+}
+
+.left-panel h4{
+margin-top:25px;
+margin-bottom:15px;
+}
+
+.feature-card{
+padding:12px;
+margin-bottom:12px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:14px;
+
+transition:.3s;
+cursor:pointer;
+}
+
+.feature-card:hover{
+transform:translateY(-4px) scale(1.02);
+
+background:rgba(255,255,255,.15);
+}
+.food-card{
+  background: rgba(255,255,255,.08);
+  border-radius:15px;
+  padding:15px;
+  margin-top:10px;
+  border:1px solid rgba(255,255,255,.1);
+}
+.left-panel button{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+
+border:none;
+border-radius:12px;
+
+background:rgba(255,255,255,.12);
+color:white;
+
+cursor:pointer;
+transition:.3s;
+}
+
+.left-panel button:hover{
+background:#ff6b35;
+transform:translateY(-2px);
+}
+
+.chat-panel{
+flex:1;
+
+display:flex;
+flex-direction:column;
+
+backdrop-filter:blur(25px);
+background:rgba(81, 11, 11, 0.436);
+
+border-radius:25px;
+border:1px solid rgba(255,255,255,.15);
+
+overflow:hidden;
+}
+
+.chat-box{
+flex:1;
+overflow-y:auto;
+padding:25px;
+}
+
+.chat-box::-webkit-scrollbar{
+width:6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb{
+background:#ff6b35;
+border-radius:10px;
+}
+
+.chat-message{
+max-width:75%;
+padding:15px 18px;
+margin-bottom:15px;
+
+border-radius:18px;
+line-height:1.6;
+white-space: pre-wrap;
+ line-height: 1.8;
+
+animation:fadeIn .4s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.chat-message.bot{
+background:rgba(255,255,255,.12);
+color:white;
+
+border-top-left-radius:5px;
+}
+
+.chat-message.user{
+background:#ff6b35;
+color:white;
+
+margin-left:auto;
+
+border-top-right-radius:5px;
+}
+
+.typing{
+color:#ffd6c4;
+font-style:italic;
+padding:10px;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:.3;}
+50%{opacity:1;}
+100%{opacity:.3;}
+}
+
+.chat-input{
+display:flex;
+gap:10px;
+
+padding:20px;
+
+border-top:1px solid rgba(255,255,255,.1);
+}
+
+.chat-input input{
+flex:1;
+
+padding:16px;
+
+border:none;
+outline:none;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.08);
+color:white;
+
+font-size:15px;
+}
+
+.chat-input input::placeholder{
+color:#cbd5e1;
+}
+
+.chat-input button{
+width:60px;
+height:60px;
+
+border:none;
+border-radius:50%;
+
+background:linear-gradient(
+135deg,
+#ff6b35,
+#ff9f1c
+);
+
+color:white;
+font-size:22px;
+
+cursor:pointer;
+
+transition:.3s;
+}
+
+.chat-input button:hover{
+transform:scale(1.1) rotate(10deg);
+}
+
+.floating{
+position:absolute;
+font-size:60px;
+
+animation:float 6s ease-in-out infinite;
+opacity:.25;
+}
+
+.food1{
+top:10%;
+left:5%;
+}
+
+.food2{
+top:20%;
+right:10%;
+animation-delay:1s;
+}
+
+.food3{
+bottom:15%;
+left:10%;
+animation-delay:2s;
+}
+
+.food4{
+bottom:10%;
+right:15%;
+animation-delay:3s;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0px) rotate(0deg);
+}
+
+50%{
+transform:translateY(-25px) rotate(12deg);
+}
+
+100%{
+transform:translateY(0px) rotate(0deg);
+}
+}
+
+@media(max-width:900px){
+
+.ai-container{
+flex-direction:column;
+height:auto;
+display:flex;
+  gap:25px;
+  min-height:80vh;
+}
+
+.left-panel{
+width:100%;
+}
+
+.chat-panel{
+height:600px;
+}
+
+.ai-header h1{
+font-size:2rem;
+}
+}
+/* ===========================
+FLOATING FOOD IMAGES
+=========================== */
+
+.floating-img{
+position:absolute;
+z-index:1;
+pointer-events:none;
+
+opacity:0.18;
+
+filter:
+drop-shadow(0 0 20px rgba(255,255,255,.25));
+
+animation:floatFood 8s ease-in-out infinite;
+}
+
+.pizza{
+width:180px;
+top:5%;
+left:2%;
+}
+
+.burger{
+width:170px;
+top:15%;
+right:3%;
+animation-delay:2s;
+}
+
+.biryani{
+width:220px;
+bottom:8%;
+left:3%;
+animation-delay:4s;
+}
+
+.icecream{
+width:170px;
+bottom:10%;
+right:5%;
+animation-delay:1s;
+}
+
+@keyframes floatFood{
+
+0%{
+transform:
+translateY(0px)
+rotate(0deg)
+scale(1);
+}
+
+50%{
+transform:
+translateY(-35px)
+rotate(8deg)
+scale(1.05);
+}
+
+100%{
+transform:
+translateY(0px)
+rotate(0deg)
+scale(1);
+}
+}
+
+/* ===========================
+GLOWING ORBS
+=========================== */
+
+.orb{
+position:absolute;
+border-radius:50%;
+filter:blur(90px);
+z-index:0;
+}
+
+.orb1{
+width:350px;
+height:350px;
+
+background:#ff6b35;
+
+top:-100px;
+left:-100px;
+
+opacity:.25;
+}
+
+.orb2{
+width:300px;
+height:300px;
+
+background:#9333ea;
+
+right:-50px;
+bottom:-50px;
+
+opacity:.25;
+}
+
+.orb3{
+width:250px;
+height:250px;
+
+background:#06b6d4;
+
+top:40%;
+left:40%;
+
+opacity:.18;
+}
+
+/* ===========================
+GLASS EFFECT
+=========================== */
+
+.left-panel,
+.chat-panel{
+backdrop-filter:blur(30px);
+-webkit-backdrop-filter:blur(30px);
+
+background:
+rgba(255,255,255,0.08);
+
+box-shadow:
+0 8px 32px rgba(0,0,0,.25),
+inset 0 0 15px rgba(255,255,255,.05);
+}
+
+/* ===========================
+CHAT HOVER EFFECT
+=========================== */
+
+.chat-message{
+transition:.3s;
+  white-space: pre-line;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.chat-message:hover{
+transform:translateY(-3px);
+}
+
+/* ===========================
+FEATURE CARDS
+=========================== */
+
+.feature-card{
+font-size:.95rem;
+font-weight:500;
+}
+
+.feature-card:hover{
+box-shadow:
+0 0 20px rgba(255,107,53,.3);
+}
+
+/* ===========================
+HEADER GLOW
+=========================== */
+
+.ai-header h1{
+background:
+linear-gradient(
+90deg,
+#ffffff,
+#ff9f1c,
+#ffffff
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:shine 4s infinite linear;
+}
+
+@keyframes shine{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:200%;
+}
+}
+
+/* ===========================
+INPUT GLOW
+=========================== */
+
+.chat-input input:focus{
+
+box-shadow:
+0 0 20px rgba(255,159,28,.4);
+
+border:
+1px solid rgba(255,159,28,.4);
+}
+
+/* ===========================
+SEND BUTTON
+=========================== */
+
+.chat-input button{
+
+box-shadow:
+0 0 20px rgba(255,107,53,.4);
+}
+
+.chat-input button:hover{
+
+box-shadow:
+0 0 30px rgba(255,107,53,.8);
+
+transform:
+scale(1.1)
+rotate(10deg);
+}
+
+/* ===========================
+CONTENT ABOVE BACKGROUND
+=========================== */
+
+.ai-header,
+.ai-container{
+position:relative;
+z-index:5;
+}
+.food-chat-image{
+  width:250px;
+  border-radius:15px;
+  margin-bottom:12px;
+  display:block;
+
+  box-shadow:
+    0 0 20px rgba(0,0,0,.25);
+
+  transition:.3s;
+}
+
+.food-chat-image:hover{
+  transform:scale(1.03);
+}
