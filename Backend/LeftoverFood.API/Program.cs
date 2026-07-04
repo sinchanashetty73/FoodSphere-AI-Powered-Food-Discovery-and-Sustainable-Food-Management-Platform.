@@ -66,11 +66,8 @@ if (!string.IsNullOrEmpty(firebaseJson))
 }
 
 // Middleware
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseCors("AllowReact");
 app.UseHttpsRedirection();
