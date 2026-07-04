@@ -116,4 +116,4 @@ FoodSpire/
 ```bash
 git clone "https://github.com/sinchanashetty73/FoodSphere-AI-Powered-Food-Discovery-and-Sustainable-Food-Management-Platform..git"
 
-cd FoodSpire
+
