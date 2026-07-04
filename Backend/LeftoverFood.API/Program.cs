@@ -52,15 +52,18 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<FirebaseNotificationService>();
 var app = builder.Build();
 
-FirebaseApp.Create(new AppOptions()
+var firebaseJson =
+    Environment.GetEnvironmentVariable(
+        "GOOGLE_APPLICATION_CREDENTIALS_JSON"
+    );
+
+if (!string.IsNullOrEmpty(firebaseJson))
 {
-    Credential = GoogleCredential.FromFile(
-        Path.Combine(
-            Directory.GetCurrentDirectory(),
-            "Firebase",
-            "foodsphereai-firebase-adminsdk-fbsvc-80337fbd6d.json"
-        ))
-});
+    FirebaseApp.Create(new AppOptions()
+    {
+        Credential = GoogleCredential.FromJson(firebaseJson)
+    });
+}
 
 // Middleware
 if (app.Environment.IsDevelopment())
