@@ -13,10 +13,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy
-            .WithOrigins(
-                "http://localhost:3000",
-                "https://foodsphere-ai-powered-food-discovery-and-sustainable-food-management-platform.onrender.com"
-            )
+            .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod();
         });
@@ -74,6 +71,9 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 // app.UseCors("AllowAll");
+
+app.UseRouting();
+
 
 app.UseCors("AllowReact");
 
