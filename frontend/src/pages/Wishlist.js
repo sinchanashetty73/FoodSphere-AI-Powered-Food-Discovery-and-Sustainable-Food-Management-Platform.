@@ -80,7 +80,7 @@ const Wishlist  = ({ onClose, addToCart }) => {
               >
 
                 <img
-                  src={`http://localhost:5194${food.imageUrl}`}
+                  src={`https://foodsphere-api.onrender.com${food.imageUrl}`}
                   alt={food.name}
                 />
 

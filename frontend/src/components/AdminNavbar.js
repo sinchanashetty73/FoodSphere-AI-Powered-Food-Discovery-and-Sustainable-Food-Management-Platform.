@@ -21,7 +21,7 @@ const handleLogout = () => {
             <div className="logo">
 
 <img 
-src="logo.png"
+src="/logo.png"
 alt="FoodSpire Logo" 
 className="logo-img"
 />

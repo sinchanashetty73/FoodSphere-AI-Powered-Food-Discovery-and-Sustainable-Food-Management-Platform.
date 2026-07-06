@@ -106,7 +106,7 @@ className="float-food food5"
 
 <img
 src="https://i.pinimg.com/736x/f4/9b/0e/f49b0e5c0fa859cdee22dff63efd7351.jpg"
-className="float-food food5"
+className="float-food food6"
 />
 
 

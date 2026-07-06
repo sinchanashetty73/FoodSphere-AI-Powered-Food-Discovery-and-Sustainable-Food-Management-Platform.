@@ -28,7 +28,7 @@ const HomeFoodAdmin = () => {
   const fetchFoods = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5194/api/HomeMadeFoods"
+        "https://foodsphere-api.onrender.com/api/HomeMadeFoods"
       );
 
       setFoods(res.data);
@@ -40,7 +40,7 @@ const HomeFoodAdmin = () => {
   const addFood = async () => {
     try {
       await axios.post(
-        "http://localhost:5194/api/HomeMadeFoods",
+        "https://foodsphere-api.onrender.com/api/HomeMadeFoods",
         newFood
       );
 
@@ -69,7 +69,7 @@ const HomeFoodAdmin = () => {
 
     try {
       await axios.delete(
-        `http://localhost:5194/api/HomeMadeFoods/${id}`
+        `https://foodsphere-api.onrender.com/api/HomeMadeFoods/${id}`
       );
 
       fetchFoods();
@@ -83,7 +83,7 @@ const HomeFoodAdmin = () => {
   const updateFood = async (food) => {
     try {
       await axios.put(
-        `http://localhost:5194/api/HomeMadeFoods/${food.id}`,
+        `https://foodsphere-api.onrender.com/api/HomeMadeFoods/${food.id}`,
         food
       );
 
@@ -224,7 +224,7 @@ const HomeFoodAdmin = () => {
           <div className="food-card" key={food.id}>
 
             <img
-  src={`http://localhost:5194${food.imageUrl}`}
+  src={`https://foodsphere-api.onrender.com${food.imageUrl}`}
   alt={food.name}
 />
 

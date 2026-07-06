@@ -7,13 +7,15 @@ import "./RestaurantAdmin.css";
 
 const RestaurantAdmin = () => {
    const navigate = useNavigate();
+  const [category, setCategory] = useState("");
    
 const [searchTerm, setSearchTerm] = useState("");
 const [foodItems, setFoodItems] = useState([]);
 const [newFood,setNewFood] = useState({
   name:"",
   price:"",
-  imageUrl:""
+  imageUrl:"",
+  category:""
 });
 
 const [editRestaurant, setEditRestaurant] = useState(null);
@@ -39,6 +41,31 @@ const [editRestaurant, setEditRestaurant] = useState(null);
       description: "Multi Cuisine Restaurant"
     }
   ]);
+
+  const [newRestaurant, setNewRestaurant] = useState({
+  name:"",
+  location:"",
+  rating:"",
+  imageUrl:"",
+  category:""
+});
+
+const fetchRestaurants = async () => {
+  try {
+
+    const res = await axios.get(
+      "https://foodsphere-api.onrender.com/api/Restaurants"
+    );
+
+    setRestaurants(res.data);
+
+  } 
+  catch (error) {
+
+    console.log(error);
+
+  }
+};
 useEffect(() => {
 
   fetchRestaurants();
@@ -52,7 +79,7 @@ const fetchFoodItems = async () => {
   try {
 
     const res = await axios.get(
-      "http://localhost:5194/api/FoodItems"
+      "https://foodsphere-api.onrender.com/api/FoodItems"
     );
 
     setFoodItems(res.data);
@@ -66,58 +93,56 @@ const fetchFoodItems = async () => {
 
 };
 
-const fetchRestaurants = async () => {
-  try {
-    const res = await axios.get(
-      "http://localhost:5194/api/Restaurants"
-    );
+const addRestaurant = async () => {
 
-    setRestaurants(res.data);
-  } catch (error) {
-    console.error(error);
-  }
-};
-  const [newRestaurant, setNewRestaurant] = useState({
-    name: "",
-    location: "",
-    rating: "",
-    imageUrl: "",
-    description: "",
-    category:""
-  });
+try{
 
-  const addRestaurant = async () => {
+await axios.post(
+"https://foodsphere-api.onrender.com/api/Restaurants",
+{
+ name:newRestaurant.name,
+ location:newRestaurant.location,
+ rating:Number(newRestaurant.rating),
+ imageUrl:newRestaurant.imageUrl,
+ category:newRestaurant.category
+}
+);
 
-  try{
-    await axios.post(
-      "http://localhost:5194/api/Restaurants",
-      newRestaurant
-    );
+fetchRestaurants();
 
-    fetchRestaurants();
+setNewRestaurant({
+ name:"",
+ location:"",
+ rating:"",
+ imageUrl:"",
+ category:""
+});
 
-    alert("Restaurant Added Successfully");
-  }
-  catch(error){
-    console.log(error);
-  }
+alert("Restaurant Added Successfully");
+
+}
+catch(error){
+ console.log(error.response.data);
+}
+
 };
 // Add foods
 const addFoodItem = async()=>{
 
 await axios.post(
-"http://localhost:5194/api/FoodItems",
+"https://foodsphere-api.onrender.com/api/FoodItems",
 {
  name:newFood.name,
  price:Number(newFood.price),
  imageUrl:newFood.imageUrl,
+ category:newFood.category,
  restaurantId:editRestaurant.id
 }
 );
 
 
 const res = await axios.get(
-`http://localhost:5194/api/FoodItems/restaurant/${editRestaurant.id}`
+`https://foodsphere-api.onrender.com/api/FoodItems/restaurant/${editRestaurant.id}`
 );
 
 setFoodItems(res.data);
@@ -132,32 +157,7 @@ setNewFood({
 alert("Food Added");
 
 };
-  const handleAddRestaurant = async () => {
-  try {
-    await axios.post(
-      "http://localhost:5194/api/Restaurants",
-      {
-        name: newRestaurant.name,
-        location: newRestaurant.location,
-        rating: Number(newRestaurant.rating),
-        imageUrl: newRestaurant.image
-      }
-    );
-
-    fetchRestaurants();
-
-    setNewRestaurant({
-      name: "",
-      location: "",
-      rating: "",
-     imageUrl: ""
-    });
-
-    alert("Restaurant Added Successfully");
-  } catch (error) {
-    console.error(error);
-  }
-};
+  
 
  const handleDelete = async (id) => {
 
@@ -167,7 +167,7 @@ alert("Food Added");
   try{
 
     await axios.delete(
-      `http://localhost:5194/api/Restaurants/${id}`
+      `https://foodsphere-api.onrender.com/api/Restaurants/${id}`
     );
 
     fetchRestaurants();
@@ -182,15 +182,14 @@ alert("Food Added");
 
   try{
 
-    await axios.put(
-`http://localhost:5194/api/Restaurants/${restaurant.id}`,
+await axios.put(
+`https://foodsphere-api.onrender.com/api/Restaurants/${restaurant.id}`,
 {
-name: restaurant.name,
-location: restaurant.location,
-rating: Number(restaurant.rating),
-imageUrl: restaurant.imageUrl,
-description: restaurant.description,
-
+ name: restaurant.name,
+ location: restaurant.location,
+ rating: Number(restaurant.rating),
+ imageUrl: restaurant.imageUrl,
+ category: restaurant.category
 }
 );
 
@@ -364,25 +363,7 @@ description: restaurant.description,
 
     </div>
 
-    <textarea
-
-      placeholder="Restaurant Description"
-
-      value={newRestaurant.description}
-
-      onChange={(e)=>
-
-        setNewRestaurant({
-
-          ...newRestaurant,
-
-          description:e.target.value
-
-        })
-
-      }
-
-    />
+   
 
     {/* Live Image Preview */}
 
@@ -408,7 +389,7 @@ description: restaurant.description,
 
       className="add-btn"
 
-      onClick={handleAddRestaurant}
+      onClick={addRestaurant}
 
     >
 
@@ -456,33 +437,27 @@ restaurant.name
             📍 {restaurant.location}
         </span>
 
-        <p className="description">
-            {restaurant.description}
-        </p>
+      
 
         <div className="action-buttons">
 
       
 
- <button
-  className="edit-btns"
+<button
+className="edit-btns"
 onClick={async () => {
 
-setEditRestaurant({
- ...restaurant,
- description: restaurant.description || "",
- imageUrl: restaurant.imageUrl || ""
-});
+setEditRestaurant(restaurant);
 
 const res = await axios.get(
-`http://localhost:5194/api/FoodItems/restaurant/${restaurant.id}`
+`https://foodsphere-api.onrender.com/api/FoodItems/restaurant/${restaurant.id}`
 );
 
 setFoodItems(res.data);
 
 }}
 >
-  ✏ Edit
+✏ Edit
 </button>
 
            <button
@@ -582,9 +557,9 @@ className="preview-image"
 
 <img
 src={
- food.imageUrl?.startsWith("http")
+ food.imageUrl?.startsWith("https")
  ? food.imageUrl
- : `http://localhost:5194${food.imageUrl}`
+ : `https://foodsphere-api.onrender.com${food.imageUrl}`
 }
 alt={food.name}
 />
@@ -644,10 +619,10 @@ imageUrl:e.target.value
 />
 <input
 placeholder="Category"
-value={newRestaurant.category}
+value={newFood.category}
 onChange={(e)=>
-setNewRestaurant({
-...newRestaurant,
+setNewFood({
+...newFood,
 category:e.target.value
 })
 }
@@ -742,15 +717,7 @@ imageUrl:e.target.value
 }
 />
 
-<textarea
-value={editRestaurant.description}
-onChange={(e)=>
-setEditRestaurant({
-...editRestaurant,
-description:e.target.value
-})
-}
-/>
+
 
 <img
     src={

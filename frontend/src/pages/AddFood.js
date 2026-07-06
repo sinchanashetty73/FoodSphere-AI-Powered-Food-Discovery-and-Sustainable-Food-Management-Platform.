@@ -12,7 +12,7 @@ function AddFood() {
 
   const handleAddFood = async () => {
     try {
-      const response = await fetch("http://localhost:5194/api/Food", {
+      const response = await fetch("https://foodsphere-api.onrender.com/api/Food", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

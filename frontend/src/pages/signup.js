@@ -17,7 +17,7 @@ const [password, setPassword] = useState("");
 
   const handleSignup = async () => {
   try {
-    const response = await fetch("http://localhost:5194/api/Auth/register", {
+    const response = await fetch("https://foodsphere-api.onrender.com/api/Auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

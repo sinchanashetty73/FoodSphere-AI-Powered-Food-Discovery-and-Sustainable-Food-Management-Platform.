@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./NightDealsAdmin.css";
 
 const API_URL =
-"http://localhost:5194/api/Food/nightdeals";
+"https://foodsphere-api.onrender.com/api/Food/nightdeals";
 
 const NightDealsAdmin = () => {
    const navigate = useNavigate();
@@ -13,16 +13,17 @@ const NightDealsAdmin = () => {
 const [editDeal, setEditDeal] = useState(null);
 
   const [newDeal, setNewDeal] = useState({
-    Name: "",
+    name: "",
+    restaurant: "",
     imageUrl: "",
     originalPrice: "",
     discountedPrice: "",
     quantity: "",
     category: "",
-    startTime: "",
-    endTime: "",
-    isActive: true
-  });
+    dealStartTime: "",
+    dealEndTime: "",
+    IsNightDeal: true
+});
 
   useEffect(() => {
     fetchDeals();
@@ -38,50 +39,62 @@ const [editDeal, setEditDeal] = useState(null);
   };
 
   const addDeal = async () => {
-  try {
 
-    console.log(newDeal);
+try {
 
-    await axios.post(API_URL, {
-      ...newDeal,
+await axios.post(API_URL, {
 
-      originalPrice: Number(newDeal.originalPrice),
-      discountedPrice: Number(newDeal.discountedPrice),
-      quantity: Number(newDeal.quantity),
+name:newDeal.name,
 
-      startTime: new Date(newDeal.startTime).toISOString(),
-      endTime: new Date(newDeal.endTime).toISOString(),
+restaurant:newDeal.restaurant,
 
-      isActive: true
-    });
+imageUrl:newDeal.imageUrl,
 
-    alert("Night Deal Added Successfully ✅");
+originalPrice:Number(newDeal.originalPrice),
 
-    setNewDeal({
-      foodName: "",
-      restaurantName: "",
-      imageUrl: "",
-      originalPrice: "",
-      discountedPrice: "",
-      quantity: "",
-      category: "",
-      startTime: "",
-      endTime: "",
-      isActive: true
-    });
+discountedPrice:Number(newDeal.discountedPrice),
 
-    fetchDeals();
+quantity:Number(newDeal.quantity),
 
-  } catch (err) {
+category:newDeal.category,
 
-    console.log(err);
+dealStartTime:new Date(newDeal.dealStartTime).toISOString(),
 
-    alert(
-      err.response?.data?.title ||
-      err.response?.data ||
-      err.message
-    );
-  }
+dealEndTime:new Date(newDeal.dealEndTime).toISOString(),
+
+IsNightDeal:true
+
+});
+
+
+alert("Night Deal Added Successfully ✅");
+
+fetchDeals();
+
+
+setNewDeal({
+name:"",
+restaurant:"",
+imageUrl:"",
+originalPrice:"",
+discountedPrice:"",
+quantity:"",
+category:"",
+dealStartTime:"",
+dealEndTime:"",
+IsNightDeal:true
+});
+
+
+}
+catch(error){
+
+console.log(error.response?.data);
+
+alert("Adding failed");
+
+}
+
 };
 
 const deleteDeal = async (id) => {
@@ -142,7 +155,7 @@ console.log(err);
 
         <input
           placeholder="Food Name"
-          value={newDeal.Name}
+          value={newDeal.name}
           onChange={(e) =>
             setNewDeal({
               ...newDeal,
@@ -223,11 +236,11 @@ console.log(err);
         <label>Start Time</label>
         <input
           type="datetime-local"
-          value={newDeal.startTime}
+          value={newDeal.dealStartTime}
           onChange={(e) =>
             setNewDeal({
               ...newDeal,
-              startTime: e.target.value
+             dealStartTime: e.target.value
             })
           }
         />
@@ -235,11 +248,11 @@ console.log(err);
         <label>End Time</label>
         <input
           type="datetime-local"
-          value={newDeal.endTime}
+          value={newDeal.dealEndTime}
           onChange={(e) =>
             setNewDeal({
               ...newDeal,
-              endTime: e.target.value
+              dealEndTime: e.target.value
             })
           }
         />
@@ -274,7 +287,7 @@ console.log(err);
             <p>📌 {deal.category}</p>
 
             <p>
-              {deal.isActive
+              {deal.IsNightDeal
                 ? "🟢 Active"
                 : "🔴 Inactive"}
             </p>

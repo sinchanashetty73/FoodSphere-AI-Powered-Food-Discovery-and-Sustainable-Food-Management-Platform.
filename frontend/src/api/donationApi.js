@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5194/api";
+const API_URL = "https://foodsphere-api.onrender.com/api";
 
 // =====================
 // OLD DONATION API

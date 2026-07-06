@@ -28,7 +28,7 @@ const AddHomeMadeFood = () => {
   try {
 
     const response = await fetch(
-      "http://localhost:5194/api/homemadefoods",
+      "https://foodsphere-api.onrender.com/api/homemadefoods",
       {
         method: "POST",
 

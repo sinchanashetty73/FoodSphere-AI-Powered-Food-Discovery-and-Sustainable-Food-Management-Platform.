@@ -34,8 +34,8 @@ const [coordinates, setCoordinates] = useState([12.9716, 77.5946]); // Bengaluru
 
     try {
 
-      const oldRes = await fetch("http://localhost:5194/api/Food/nightdeals");
-      const newRes = await fetch("http://localhost:5194/api/NightDeals");
+      const oldRes = await fetch("https://foodsphere-api.onrender.com/api/Food/nightdeals");
+      const newRes = await fetch("https://foodsphere-api.onrender.com/api/NightDeals");
 
       const oldDeals = oldRes.ok ? await oldRes.json() : [];
       const newDeals = newRes.ok ? await newRes.json() : [];
@@ -169,7 +169,7 @@ const searchLocation = async () => {
         const bookDeal = async (deal) => {
   try {
     const response = await fetch(
-      "http://localhost:5194/api/DealBooking",
+      "https://foodsphere-api.onrender.com/api/DealBooking",
       {
         method: "POST",
         headers: {
@@ -242,7 +242,7 @@ const handlePayNow = async () => {
     console.log("Booking Data:", bookingData);
 
     const response = await fetch(
-      "http://localhost:5194/api/DealBooking",
+      "https://foodsphere-api.onrender.com/api/DealBooking",
       {
         method: "POST",
         headers: {
