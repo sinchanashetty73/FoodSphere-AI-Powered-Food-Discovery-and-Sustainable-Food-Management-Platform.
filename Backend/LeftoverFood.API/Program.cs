@@ -6,6 +6,18 @@ using LeftoverFood.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ADD THIS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReact",
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 // Add services
 builder.Services.AddControllers();
 
@@ -51,6 +63,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddScoped<FirebaseNotificationService>();
 var app = builder.Build();
+
 
 var firebaseJson =
     Environment.GetEnvironmentVariable(
