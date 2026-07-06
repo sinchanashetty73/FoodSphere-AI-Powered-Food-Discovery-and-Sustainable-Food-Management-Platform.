@@ -1,6 +1,6 @@
 namespace LeftoverFood.API.Models
 {
-    public class Restaurant
+   public class Restaurant
     {
         public int Id { get; set; }
 
@@ -12,6 +12,6 @@ namespace LeftoverFood.API.Models
 
         public double Rating { get; set; }
 
-        public string Category { get; set; }
+        public string Category { get; set; } = string.Empty;
     }
 }
