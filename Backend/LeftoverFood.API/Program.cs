@@ -6,15 +6,19 @@ using LeftoverFood.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ADD THIS
+// CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact",
         policy =>
         {
-            policy.AllowAnyOrigin()
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
+            policy
+            .WithOrigins(
+                "http://localhost:3000",
+                "https://foodsphere-ai-powered-food-discovery-and-sustainable-food-management-platform.onrender.com"
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
         });
 });
 
@@ -30,16 +34,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:3000")
-                  .AllowAnyMethod()
-                  .AllowAnyHeader();
-        });
-});
+
 
 // builder.Services.AddCors(options =>
 // {
@@ -51,15 +46,7 @@ builder.Services.AddCors(options =>
 //                   .AllowAnyHeader();
 //         });
 // });
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowReact", policy =>
-    {
-        policy.WithOrigins("http://localhost:3000")
-              .AllowAnyMethod()
-              .AllowAnyHeader();
-    });
-});
+
 
 builder.Services.AddScoped<FirebaseNotificationService>();
 var app = builder.Build();
@@ -82,12 +69,15 @@ if (!string.IsNullOrEmpty(firebaseJson))
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseCors("AllowReact");
+
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 // app.UseCors("AllowAll");
 
+app.UseCors("AllowReact");
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
