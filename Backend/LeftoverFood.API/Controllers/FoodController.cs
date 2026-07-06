@@ -33,6 +33,16 @@ public IActionResult GetNightDeals()
     );
 }
 
+// post night deals
+[HttpPost("nightdeals")]
+public async Task<IActionResult> AddNightDeal([FromBody] FoodItem food)
+{
+    _context.FoodItems.Add(food);
+    await _context.SaveChangesAsync();
+
+    return Ok(food);
+}
+
         // ADD FOOD + SEND NOTIFICATION
         [HttpPost]
         public async Task<IActionResult> AddFood(FoodItem food)
