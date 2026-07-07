@@ -137,11 +137,12 @@ linear-gradient(
 }
 
 .login-btn {
-  padding: 10px 18px;
+  padding: 15px 18px;
+  align-items: center;
   border: none;
   background: #030625;
   color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
 }
@@ -158,7 +159,7 @@ linear-gradient(
 .notification-icon {
   position: relative;
 
-  width: 50px;
+  width: 40px;
   height: 50px;
 
   display: flex;
