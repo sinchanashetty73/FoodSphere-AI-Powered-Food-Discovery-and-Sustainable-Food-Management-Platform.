@@ -29,7 +29,7 @@ const handleLogin = async () => {
 
     if (response.ok) {
 
-  localStorage.setItem("userEmail", email);
+  localStorage.setItem("user", email);
 
   localStorage.setItem("role", role);
 

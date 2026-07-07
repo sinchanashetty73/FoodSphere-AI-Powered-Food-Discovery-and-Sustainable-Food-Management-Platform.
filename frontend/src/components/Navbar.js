@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import {  Link } from "react-router-dom";
@@ -8,10 +9,12 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
-
+ const [isLogin, setIsLogin] = useState(
+    localStorage.getItem("user") ? true : false
+  );
   const handleLogout = () => {
    localStorage.removeItem("user");
-
+  setIsLogin(false);
    navigate("/");
    
 };
