@@ -1,10 +1,10 @@
 /* NAVBAR MAIN */
 .navbar {
-  height: 80px;
+  height: 95px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 45px;
   background: #bf1a1a;
   background-color: #d7d7d4;
   border-bottom: 1px solid #f1efef;
@@ -93,7 +93,8 @@ linear-gradient(
 ====================== */
 .nav-links {
   display: flex;
-  gap: 18px;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-item {
@@ -138,6 +139,8 @@ linear-gradient(
 
 .login-btn {
   padding: 15px 18px;
+  width: 90px;
+  height: 55px;
   align-items: center;
   border: none;
   background: #030625;
@@ -150,10 +153,24 @@ linear-gradient(
 /* ======================
    RESPONSIVE
 ====================== */
-@media(max-width:1000px) {
-  .nav-links {
-    display: none;
-  }
+@media (max-width:1200px){
+
+.navbar{
+ padding:0 20px;
+}
+
+.nav-links{
+ gap:20px;
+}
+
+.nav-links a{
+ font-size:17px;
+}
+
+.logo-section h1{
+ font-size:25px;
+}
+
 }
 /* Notification Container */
 .notification-icon {
