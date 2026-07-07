@@ -1,10 +1,11 @@
 /* NAVBAR MAIN */
 .navbar {
-  height: 95px;
+  height: 90px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 45px;
+  padding: 0 40px;
   background: #bf1a1a;
   background-color: #d7d7d4;
   border-bottom: 1px solid #f1efef;
@@ -94,7 +95,7 @@ linear-gradient(
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .nav-item {
@@ -184,7 +185,7 @@ linear-gradient(
 }
 
 .nav-links a {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .login-btn {
