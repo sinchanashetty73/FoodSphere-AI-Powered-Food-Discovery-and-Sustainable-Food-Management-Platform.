@@ -1,271 +1,323 @@
-/* NAVBAR MAIN */
-.navbar {
-   min-height:100px;
-  width: 100%;
-  display: flex;
-   padding:10px 35px;
-  align-items: center;
-  justify-content: space-between;
-   box-sizing:border-box;
-  background: #bf1a1a;
-  background-color: #d7d7d4;
-  border-bottom: 1px solid #f1efef;
-  gap:20px
-}
+/* ==========================
+        NAVBAR
+========================== */
 
-/* ======================
-   LOGO SECTION
-====================== */
-.logo-section{
+.navbar{
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-gap:10px;
-
-height:80px;
-
-font-size:32px;
-
-font-weight:900;
-
-color:#3b0b0b;
-
-}
-
-
-/* logo image */
-
-.logo-imgs{
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
-
-object-fit:cover;
-
-padding:3px;
-
-background:white;
-
-box-shadow:
-0 8px 20px rgba(0,0,0,0.25);
-
-transition:0.3s ease;
-
-}
-
-
-/* small hover effect */
-
-.logo-imgs:hover{
-
-transform:scale(1.1) rotate(5deg);
-
-}
-
-
-/* FoodSpire text */
-
-.logo-section span{
-
-font-size:34px;
-
-font-weight:800;
-
-background:
-linear-gradient(
-90deg,
-#3b0b0b,
-#ff7b00
-);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-}
-
-/* ======================
-   NAV LINKS
-====================== */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex:1;
-}
-
-.nav-item {
-  text-decoration: none;
-  color: #390e0e;
-  padding: 10px 14px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  font-size: 20px;
-  white-space:nowrap;
-}
-
-/* Hover */
-.nav-item:hover {
-  background: #bcdaea;
-}
-
-/* ACTIVE PAGE */
-.nav-item.active {
-  background: #e6bfda;
-  color: #591c1f;
-  font-weight: 600;
-}
-
-/* ======================
-   RIGHT BUTTONS
-====================== */
-.right-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.ai-btn {
-  padding: 10px 16px;
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  /* width: 150px;
-  height: 70px; */
-}
-
-.login-btn {
-  padding: 15px 18px;
- 
-  align-items: center;
-  border: none;
-  background: #030625;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-/* ======================
-   RESPONSIVE
-====================== */
-@media (max-width: 768px) {
-
-.navbar {
-  height: auto;
-   padding:10px 20px;
-
-  flex-direction: column;
-}
-
-.logo-section {
-  justify-content: center;
-}
-
-.logo-section span{
-
-    font-size:28px;
-
-}
-
-.logo-section img {
-  width: 55px;
-  height: 55px;
-}
-
-.logo-section h1 {
-  font-size: 28px;
-}
-
-.nav-links {
-  width: 100%;
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-
-.nav-links a {
-  font-size: 15px;
-}
-
-.login-btn {
-  width: 90px;
-  height: 45px;
-}
-
-}
-/* Notification Container */
-.notification-icon {
-  position: relative;
-
-  width: 40px;
-  height: 50px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-   gap: 20px;
-  background: #ffffff;
-  align-items: center;
-
-  border-radius: 50%;
-
-  color: #111;
-
-  text-decoration: none;
-
-  box-shadow:
-      0 0 0 3px rgba(255,255,255,0.8),
-      0 0 15px rgba(255,105,180,0.45);
-
-  transition: all .3s ease;
-}
-
-.notification-icon:hover{
-    transform: scale(1.08);
-    box-shadow:
-        0 0 0 3px #fff,
-        0 0 22px rgba(255,105,180,.75);
-}
-
-/* Bell */
-.notification-icon svg{
-    font-size:28px;
-    color:#111;
-}
-
-/* Notification Badge */
-.notification-badge{
-    position:absolute;
-   gap: 20px;
-   align-items: center;
-    top:-6px;
-    right:-3px;
-
-    /* width:22px;
-    height:22px;
-
-    border-radius:50%;
-
-    background:#ff3b30;
-    color:#fff; */
-
-    font-size:12px;
-    font-weight:700;
+    width:100%;
+    min-height:90px;
 
     display:flex;
     align-items:center;
+    justify-content:space-between;
+
+    padding:10px 25px;
+
+    background:#d7d7d4;
+
+    gap:15px;
+
+    box-sizing:border-box;
+
+}
+
+
+/* LOGO */
+
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-shrink:0;
+
+}
+
+
+.logo-imgs{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:white;
+
+    padding:3px;
+
+}
+
+
+.logo-section span{
+
+
+    font-size:32px;
+
+    font-weight:900;
+
+    background:linear-gradient(
+        90deg,
+        #3b0b0b,
+        #ff7b00
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+/* LINKS */
+
+
+.nav-links{
+
+
+    flex:1;
+
+    display:flex;
+
     justify-content:center;
 
-    border:2px solid #fff;
+    align-items:center;
+
+
+    gap:18px;
+
+
+}
+
+
+.nav-item{
+
+
+    text-decoration:none;
+
+    color:#390e0e;
+
+
+    font-size:19px;
+
+
+    padding:10px 12px;
+
+
+    border-radius:10px;
+
+
+    white-space:nowrap;
+
+
+}
+
+
+.nav-item.active{
+
+    background:#e6bfda;
+
+}
+
+
+.nav-item:hover{
+
+    background:#e6bfda;
+
+}
+
+
+
+/* RIGHT SIDE */
+
+
+.right-buttons{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+    flex-shrink:0;
+
+}
+
+
+
+.notification-icon{
+
+
+    width:50px;
+
+
+    height:50px;
+
+
+    border-radius:50%;
+
+
+    background:white;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    color:black;
+
+
+    font-size:26px;
+
+
+    text-decoration:none;
+
+
+}
+
+
+.login-btn{
+
+
+    padding:15px 22px;
+
+
+    border:none;
+
+
+    border-radius:8px;
+
+
+    background:#88737b;
+
+
+    color:white;
+
+
+    font-size:17px;
+
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+/* =========================
+   LAPTOP RESPONSIVE FIX
+========================= */
+
+
+@media(max-width:1300px){
+
+
+.logo-section span{
+
+    font-size:27px;
+
+}
+
+
+.logo-imgs{
+
+    width:55px;
+
+    height:55px;
+
+}
+
+
+.nav-links{
+
+    gap:8px;
+
+}
+
+
+.nav-item{
+
+    font-size:17px;
+
+    padding:8px;
+
+}
+
+
+.login-btn{
+
+    padding:12px 18px;
+
+}
+
+
+
+}
+
+
+
+
+
+/* =========================
+        MOBILE
+========================= */
+
+
+@media(max-width:768px){
+
+
+.navbar{
+
+    flex-direction:column;
+
+    height:auto;
+
+}
+
+
+
+.nav-links{
+
+
+    width:100%;
+
+
+    flex-direction:column;
+
+
+}
+
+
+.nav-item{
+
+    width:90%;
+
+    text-align:center;
+
+}
+
+
+.right-buttons{
+
+    flex-direction:column;
+
+}
+
+
 }
