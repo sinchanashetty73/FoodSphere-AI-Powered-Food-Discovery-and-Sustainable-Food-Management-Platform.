@@ -27,7 +27,7 @@ const DonationAdmin = () => {
 
       const res =
         await axios.get(
-          "https://foodsphere-api.onrender.com/api/DonationTracking"
+          `${process.env.REACT_APP_API_URL}/api/DonationTracking`
         );
          console.log(res.data);
       setDonations(res.data);
@@ -37,7 +37,7 @@ const DonationAdmin = () => {
     async (id, status) => {
 
      await axios.put(
-  `https://foodsphere-api.onrender.com/api/DonationTracking/${id}/status`,
+  `${process.env.REACT_APP_API_URL}/api/DonationTracking/${id}/status`,
   JSON.stringify(status),
   {
     headers: {

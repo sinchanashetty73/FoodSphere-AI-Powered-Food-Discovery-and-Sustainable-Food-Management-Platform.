@@ -19,7 +19,7 @@ export const requestNotificationPermission = async () => {
       });
 
      console.log("FCM TOKEN:", currentToken);
-     await fetch("https://foodsphere-api.onrender.com/api/Fcm/save-token", {
+     await fetch(`${process.env.REACT_APP_API_URL}/api/Fcm/save-token`, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

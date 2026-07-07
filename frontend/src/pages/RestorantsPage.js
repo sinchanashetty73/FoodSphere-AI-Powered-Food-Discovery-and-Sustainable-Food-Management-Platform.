@@ -26,7 +26,7 @@ const fetchRestaurants = async()=>{
 try{
 
 const res = await axios.get(
-"https://foodsphere-api.onrender.com/api/Restaurants"
+`${process.env.REACT_APP_API_URL}/api/Restaurants`
 );
 
 console.log("Restaurants from API:", res.data);
@@ -114,7 +114,7 @@ onClick={()=>navigate(`/restaurant/${item.id}`)}
 src={
 item.imageUrl?.startsWith("http")
 ? item.imageUrl
-:`https://foodsphere-api.onrender.com${item.imageUrl}`
+:`${process.env.REACT_APP_API_URL}${item.imageUrl}`
 }
 alt={item.name}
 />

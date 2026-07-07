@@ -122,7 +122,7 @@ const [coordinates, setCoordinates] = useState([
   });
 
   useEffect(() => {
-    fetch("https://foodsphere-api.onrender.com/api/HomeMadeFoods")
+    fetch(`${process.env.REACT_APP_API_URL}/api/HomeMadeFoods`)
         .then((res) => res.json())
         .then((data) => {
             setHomeMadeFoods(data);
@@ -214,7 +214,7 @@ if (!userEmail) {
     };
 
     const response = await fetch(
-      "https://foodsphere-api.onrender.com/api/DealBooking",
+      `${process.env.REACT_APP_API_URL}/api/DealBooking`,
       {
         method: "POST",
         headers: {
@@ -325,7 +325,7 @@ Wishlist ❤️
         </button>
 
         <img
-          src={`https://foodsphere-api.onrender.com${food.imageUrl}`}
+          src={`${process.env.REACT_APP_API_URL}${food.imageUrl}`}
           alt={food.name}
           className="homemade-food-image"
         />
@@ -406,7 +406,7 @@ Wishlist ❤️
         <div className="booking-left">
 
          <img
-  src={`https://foodsphere-api.onrender.com${selectedFood.imageUrl}`}
+  src={`${process.env.REACT_APP_API_URL}${selectedFood.imageUrl}`}
   alt={selectedFood.name}
   className="booking-image"
 />

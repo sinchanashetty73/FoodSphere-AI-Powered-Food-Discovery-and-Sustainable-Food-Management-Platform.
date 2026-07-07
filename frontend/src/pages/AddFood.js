@@ -12,7 +12,7 @@ function AddFood() {
 
   const handleAddFood = async () => {
     try {
-      const response = await fetch("https://foodsphere-api.onrender.com/api/Food", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/Fcm/save-token`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

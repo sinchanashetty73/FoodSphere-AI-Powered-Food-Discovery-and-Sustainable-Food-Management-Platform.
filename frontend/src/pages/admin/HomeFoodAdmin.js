@@ -28,7 +28,7 @@ const HomeFoodAdmin = () => {
   const fetchFoods = async () => {
     try {
       const res = await axios.get(
-        "https://foodsphere-api.onrender.com/api/HomeMadeFoods"
+        `${process.env.REACT_APP_API_URL}/api/HomeMadeFoods`
       );
 
       setFoods(res.data);
@@ -37,39 +37,61 @@ const HomeFoodAdmin = () => {
     }
   };
 
-  const addFood = async () => {
-    try {
-      await axios.post(
-        "https://foodsphere-api.onrender.com/api/HomeMadeFoods",
-        newFood
-      );
+ const addFood = async () => {
 
-      fetchFoods();
+try {
 
-      setNewFood({
-        name: "",
-        imageUrl: "",
-        price: "",
-        originalPrice: "",
-        seller: "",
-        rating: "",
-        location: "",
-        description: "",
-        category: ""
-      });
+await axios.post(
+`${process.env.REACT_APP_API_URL}/api/HomeMadeFoods`,
+{
+ name: newFood.name,
+ imageUrl: newFood.imageUrl,
+ price: Number(newFood.price),
+ originalPrice: Number(newFood.originalPrice),
+ seller: newFood.seller,
+ rating: Number(newFood.rating),
+ location: newFood.location,
+ description: newFood.description,
+ category: newFood.category
+}
+);
 
-      alert("Food Added Successfully");
-    } catch (error) {
-      console.log(error);
-    }
-  };
+
+fetchFoods();
+
+
+setNewFood({
+ name:"",
+ imageUrl:"",
+ price:"",
+ originalPrice:"",
+ seller:"",
+ rating:"",
+ location:"",
+ description:"",
+ category:""
+});
+
+
+alert("Food Added Successfully ✅");
+
+}
+catch(error){
+
+console.log(error.response?.data);
+
+alert(JSON.stringify(error.response?.data));
+
+}
+
+};
 
   const deleteFood = async (id) => {
     if (!window.confirm("Delete this food?")) return;
 
     try {
       await axios.delete(
-        `https://foodsphere-api.onrender.com/api/HomeMadeFoods/${id}`
+        `${process.env.REACT_APP_API_URL}/api/HomeMadeFoods/${id}`
       );
 
       fetchFoods();
@@ -83,7 +105,7 @@ const HomeFoodAdmin = () => {
   const updateFood = async (food) => {
     try {
       await axios.put(
-        `https://foodsphere-api.onrender.com/api/HomeMadeFoods/${food.id}`,
+        `${process.env.REACT_APP_API_URL}/api/HomeMadeFoods/${food.id}`,
         food
       );
 
@@ -223,9 +245,13 @@ const HomeFoodAdmin = () => {
 
           <div className="food-card" key={food.id}>
 
-            <img
-  src={`https://foodsphere-api.onrender.com${food.imageUrl}`}
-  alt={food.name}
+  <img
+src={
+ food.imageUrl?.startsWith("http")
+ ? food.imageUrl
+ : `${process.env.REACT_APP_API_URL}${food.imageUrl}`
+}
+alt={food.name}
 />
 
             {editingId === food.id ? (

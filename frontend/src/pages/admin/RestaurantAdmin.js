@@ -54,7 +54,7 @@ const fetchRestaurants = async () => {
   try {
 
     const res = await axios.get(
-      "https://foodsphere-api.onrender.com/api/Restaurants"
+      `${process.env.REACT_APP_API_URL}/api/Restaurants`
     );
 
     setRestaurants(res.data);
@@ -79,7 +79,7 @@ const fetchFoodItems = async () => {
   try {
 
     const res = await axios.get(
-      "https://foodsphere-api.onrender.com/api/FoodItems"
+      `${process.env.REACT_APP_API_URL}/api/FoodItems`
     );
 
     setFoodItems(res.data);
@@ -98,7 +98,7 @@ const addRestaurant = async () => {
 try{
 
 await axios.post(
-"https://foodsphere-api.onrender.com/api/Restaurants",
+`${process.env.REACT_APP_API_URL}/api/Restaurants`,
 {
  name:newRestaurant.name,
  location:newRestaurant.location,
@@ -130,7 +130,7 @@ catch(error){
 const addFoodItem = async()=>{
 
 await axios.post(
-"https://foodsphere-api.onrender.com/api/FoodItems",
+`${process.env.REACT_APP_API_URL}/api/FoodItems`,
 {
  name:newFood.name,
  price:Number(newFood.price),
@@ -142,7 +142,7 @@ await axios.post(
 
 
 const res = await axios.get(
-`https://foodsphere-api.onrender.com/api/FoodItems/restaurant/${editRestaurant.id}`
+`${process.env.REACT_APP_API_URL}/api/FoodItems/restaurant/${editRestaurant.id}`
 );
 
 setFoodItems(res.data);
@@ -167,7 +167,7 @@ alert("Food Added");
   try{
 
     await axios.delete(
-      `https://foodsphere-api.onrender.com/api/Restaurants/${id}`
+      `${process.env.REACT_APP_API_URL}/api/Restaurants/${id}`
     );
 
     fetchRestaurants();
@@ -183,7 +183,7 @@ alert("Food Added");
   try{
 
 await axios.put(
-`https://foodsphere-api.onrender.com/api/Restaurants/${restaurant.id}`,
+`${process.env.REACT_APP_API_URL}/api/Restaurants/${restaurant.id}`,
 {
  name: restaurant.name,
  location: restaurant.location,
@@ -450,7 +450,7 @@ onClick={async () => {
 setEditRestaurant(restaurant);
 
 const res = await axios.get(
-`https://foodsphere-api.onrender.com/api/FoodItems/restaurant/${restaurant.id}`
+`${process.env.REACT_APP_API_URL}/api/FoodItems/restaurant/${restaurant.id}`
 );
 
 setFoodItems(res.data);
@@ -559,7 +559,7 @@ className="preview-image"
 src={
  food.imageUrl?.startsWith("https")
  ? food.imageUrl
- : `https://foodsphere-api.onrender.com${food.imageUrl}`
+ : `${process.env.REACT_APP_API_URL}${food.imageUrl}`
 }
 alt={food.name}
 />

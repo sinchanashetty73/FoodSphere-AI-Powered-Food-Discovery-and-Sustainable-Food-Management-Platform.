@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./NightDealsAdmin.css";
 
 const API_URL =
-"https://foodsphere-api.onrender.com/api/Food/nightdeals";
+`${process.env.REACT_APP_API_URL}/api/Food/nightdeals`;
 
 const NightDealsAdmin = () => {
    const navigate = useNavigate();

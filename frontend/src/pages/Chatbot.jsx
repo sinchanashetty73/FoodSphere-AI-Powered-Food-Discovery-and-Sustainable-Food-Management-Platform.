@@ -39,7 +39,7 @@ setLoading(true);
 
 try {
   const response = await axios.post(
-    "https://foodsphere-api.onrender.com/api/Chatbot/ask",
+   `${process.env.REACT_APP_API_URL}/Chatbot/ask`,
     {
       message: currentInput,
     }

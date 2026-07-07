@@ -25,7 +25,7 @@ const DonationTracking = () => {
 
  axios
  .get(
-  "https://foodsphere-api.onrender.com/api/DonationTracking"
+  `${process.env.REACT_APP_API_URL}/api/DonationTracking`
  )
  .then(res =>
  setDonations(res.data));

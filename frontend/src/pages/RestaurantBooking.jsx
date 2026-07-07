@@ -40,7 +40,7 @@ const [foods, setFoods] = useState([]);
 
 
 useEffect(() => {
-  fetch(`https://foodsphere-api.onrender.com/api/fooditems/restaurant/${id}`)
+  fetch(`${process.env.REACT_APP_API_URL}/api/fooditems/restaurant/${id}`)
     .then((res) => res.json())
     .then((data) => {
       setFoods(data);
@@ -219,7 +219,7 @@ const saveBooking = async (paymentMethod) => {
     };
 
     await axios.post(
-      "https://foodsphere-api.onrender.com/api/bookings",
+      `${process.env.REACT_APP_API_URL}/api/bookings`,
       bookingData
     );
 
@@ -340,7 +340,7 @@ const saveBooking = async (paymentMethod) => {
 
 
       <img
-        src={`https://foodsphere-api.onrender.com${item.imageUrl}`}
+        src={`${process.env.REACT_APP_API_URL}${item.imageUrl}`}
         alt={item.name}
         className="booking-food-image"
       />

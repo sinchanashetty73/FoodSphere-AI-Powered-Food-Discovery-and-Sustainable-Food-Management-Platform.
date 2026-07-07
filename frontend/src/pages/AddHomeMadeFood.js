@@ -28,7 +28,7 @@ const AddHomeMadeFood = () => {
   try {
 
     const response = await fetch(
-      "https://foodsphere-api.onrender.com/api/homemadefoods",
+      `${process.env.REACT_APP_API_URL}/api/Fcm/save-token`,
       {
         method: "POST",
 

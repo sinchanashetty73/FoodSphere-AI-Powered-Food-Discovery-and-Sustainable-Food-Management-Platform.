@@ -12,7 +12,7 @@ const NotificationPage = () => {
   const loadNotifications = async () => {
     try {
       const res = await axios.get(
-        "https://foodsphere-api.onrender.com/api/Notification"
+        `${process.env.REACT_APP_API_URL}/api/Notification`
       );
 
       setNotifications(res.data);
@@ -23,7 +23,7 @@ const NotificationPage = () => {
 
   const markRead = async (id) => {
     await axios.put(
-      `https://foodsphere-api.onrender.com/api/Notification/${id}/read`
+      `${process.env.REACT_APP_API_URL}/api/Notification/${id}/read`
     );
    
     loadNotifications();
@@ -31,7 +31,7 @@ const NotificationPage = () => {
 
   const deleteNotification = async (id) => {
     await axios.delete(
-      `https://foodsphere-api.onrender.com/api/Notification/${id}`
+      `${process.env.REACT_APP_API_URL}/api/Notification/${id}`
     );
 
     loadNotifications();

@@ -27,7 +27,7 @@ const [volunteerPhone, setVolunteerPhone] =
   const loadDonations = async () => {
     try {
       const res = await axios.get(
-        "https://foodsphere-api.onrender.com/api/DonationTracking"
+        `${process.env.REACT_APP_API_URL}/api/DonationTracking`
       );
 
       setDonations(res.data);
@@ -44,7 +44,7 @@ const [volunteerPhone, setVolunteerPhone] =
 const assignVolunteer = async (id) => {
   try {
     await axios.put(
-      `https://foodsphere-api.onrender.com/api/Volunteers/${id}/assign-volunteer`,
+      `${process.env.REACT_APP_API_URL}/api/Volunteers/${id}/assign-volunteer`,
       {
         volunteerName,
         volunteerPhone
@@ -69,7 +69,7 @@ const assignVolunteer = async (id) => {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `https://foodsphere-api.onrender.com/api/DonationTracking/${id}/status`,
+        `${process.env.REACT_APP_API_URL}/api/DonationTracking/${id}/status`,
         JSON.stringify(status),
         {
           headers: {

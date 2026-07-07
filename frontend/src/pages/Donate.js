@@ -24,7 +24,7 @@ useEffect(() => {
 const fetchTrackingData = async () => {
   try {
     const res = await axios.get(
-      "https://foodsphere-api.onrender.com/api/DonationTracking"
+      `${process.env.REACT_APP_API_URL}/api/DonationTracking`
     );
 
     setTrackingData(res.data);
@@ -354,7 +354,7 @@ if (!mealCount || mealCount <= 0){
     const donatedMeals = parseInt(mealCount);
 
     await axios.post(
-      "https://foodsphere-api.onrender.com/api/MealDonations",
+      `${process.env.REACT_APP_API_URL}/api/MealDonations`,
       {
         donationRequestId: requestId,
         mealsDonated: donatedMeals

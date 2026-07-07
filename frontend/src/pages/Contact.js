@@ -18,7 +18,7 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await axios.post(
-      "https://foodsphere-api.onrender.com/api/contact",
+      `${process.env.REACT_APP_API_URL}/api/contact`,
       {
         name,
         email,

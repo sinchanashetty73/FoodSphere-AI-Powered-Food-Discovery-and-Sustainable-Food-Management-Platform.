@@ -14,7 +14,7 @@ const [role, setRole] = useState("user");
 
 const handleLogin = async () => {
   try {
-    const response = await fetch("https://foodsphere-api.onrender.com/api/Auth/login", {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/Auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
