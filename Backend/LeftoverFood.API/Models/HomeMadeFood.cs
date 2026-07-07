@@ -1,22 +1,26 @@
-public class HomeMadeFood
+namespace LeftoverFood.API.Models
 {
-    public int Id { get; set; }
+public class HomeMadeFood
 
-    public string Name { get; set; }
+    {
+        public int Id { get; set; }
 
-    public string ImageUrl { get; set; }
+        public string Name { get; set; } = string.Empty;
 
-    public int Price { get; set; }
+        public string ImageUrl { get; set; } = string.Empty;
 
-    public int OriginalPrice { get; set; }
+        public int Price { get; set; }
 
-    public string Seller { get; set; }
+        public int OriginalPrice { get; set; }
 
-    public double Rating { get; set; }
+        public string Seller { get; set; } = string.Empty;
 
-    public string Location { get; set; }
+        public double Rating { get; set; }
 
-    public string Description { get; set; }
+        public string Location { get; set; } = string.Empty;
 
-    public string Category { get; set; }
+        public string Description { get; set; } = string.Empty;
+
+        public string Category { get; set; } = string.Empty;
+    }
 }

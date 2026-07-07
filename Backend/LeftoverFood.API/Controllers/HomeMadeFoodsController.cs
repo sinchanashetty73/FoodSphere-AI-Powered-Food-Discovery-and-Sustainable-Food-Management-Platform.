@@ -27,7 +27,7 @@ namespace LeftoverFood.API.Controllers
 
         // ADD FOODS
          [HttpPost]
-        public async Task<IActionResult> AddFood(HomeMadeFood food)
+        public async Task<IActionResult> AddFood([FromBody] HomeMadeFood food)
         {
             _context.HomeMadeFoods.Add(food);
 
