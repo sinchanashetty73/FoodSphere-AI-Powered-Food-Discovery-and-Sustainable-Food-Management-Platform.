@@ -118,12 +118,13 @@ FoodSpire/
 
 ```bash
 git clone "https://github.com/sinchanashetty73/FoodSphere-AI-Powered-Food-Discovery-and-Sustainable-Food-Management-Platform..git"
+```
 
-Live Demo:
-https://frontend-dtw6.onrender.com
+## 🌐 Live Demo
 
-Backend API:
-https://foodsphere-api.onrender.com/swagger
+🔗 [FoodSpire Website](https://frontend-dtw6.onrender.com)
+
+🔗 [Backend Swagger API](https://foodsphere-api.onrender.com/swagger)
 
 
 
