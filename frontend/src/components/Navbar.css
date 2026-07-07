@@ -1,14 +1,16 @@
 /* NAVBAR MAIN */
 .navbar {
-  height: 90px;
+   min-height:100px;
   width: 100%;
   display: flex;
+   padding:10px 35px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+   box-sizing:border-box;
   background: #bf1a1a;
   background-color: #d7d7d4;
   border-bottom: 1px solid #f1efef;
+  gap:20px
 }
 
 /* ======================
@@ -22,7 +24,7 @@ align-items:center;
 
 justify-content:center;
 
-gap:14px;
+gap:10px;
 
 height:80px;
 
@@ -74,7 +76,7 @@ transform:scale(1.1) rotate(5deg);
 
 font-size:34px;
 
-font-weight:900;
+font-weight:800;
 
 background:
 linear-gradient(
@@ -95,7 +97,8 @@ linear-gradient(
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
+  flex:1;
 }
 
 .nav-item {
@@ -105,6 +108,7 @@ linear-gradient(
   border-radius: 10px;
   transition: all 0.3s ease;
   font-size: 20px;
+  white-space:nowrap;
 }
 
 /* Hover */
@@ -124,7 +128,7 @@ linear-gradient(
 ====================== */
 .right-buttons {
   display: flex;
-  gap: 12px;
+  gap: 15px;
 }
 
 .ai-btn {
@@ -140,8 +144,7 @@ linear-gradient(
 
 .login-btn {
   padding: 15px 18px;
-  width: 90px;
-  height: 55px;
+ 
   align-items: center;
   border: none;
   background: #030625;
@@ -158,12 +161,19 @@ linear-gradient(
 
 .navbar {
   height: auto;
-  padding: 15px;
+   padding:10px 20px;
+
   flex-direction: column;
 }
 
 .logo-section {
   justify-content: center;
+}
+
+.logo-section span{
+
+    font-size:28px;
+
 }
 
 .logo-section img {
