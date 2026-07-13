@@ -71,7 +71,7 @@
 
  justify-content:center;
 
- gap:25px;
+ gap:20px;
 
  flex:1;
 
@@ -86,7 +86,7 @@
 
  font-size:20px;
 
- padding:12px 14px;
+ padding:10px 14px;
 
  border-radius:10px;
 
@@ -161,7 +161,7 @@
 .login-btns {
  margin-left: center;
  width:90px;
-margin-right: 20px;
+margin-right: 100px;
  height:55px;
 justify-content: center;
  border:none;
