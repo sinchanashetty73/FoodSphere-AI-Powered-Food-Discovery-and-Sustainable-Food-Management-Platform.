@@ -54,13 +54,13 @@ const Navbar = () => {
         {/* <button className="ai-btn">🤖 AI Assistant</button> */}
         {/* Login / Logout Button */}
 
-    <Link to="/notifications" className="notification-icon">
+    {/* <Link to="/notifications" className="notification-icon">
     <IoNotifications />
     <span className="notification-badge"></span>
-</Link>
+</Link> */}
         {
           localStorage.getItem("user") ? (
-            <button className="login-btn" onClick={handleLogout}>
+            <button className="login-btns" onClick={handleLogout}>
               Logout
             </button>
           ) : (

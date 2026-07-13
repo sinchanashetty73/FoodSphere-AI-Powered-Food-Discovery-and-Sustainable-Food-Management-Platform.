@@ -158,13 +158,14 @@
 
 /* logout */
 
-.login-btn {
-
+.login-btns {
+ margin-left: center;
  width:90px;
-
+margin-right: 20px;
  height:55px;
-
+justify-content: center;
  border:none;
+
 
  border-radius:8px;
 
@@ -190,7 +191,7 @@
 
  flex-direction:column;
 
- padding:15px;
+ padding:13px;
 
 }
 
