@@ -1,7 +1,7 @@
 /* NAVBAR MAIN */
 .navbar {
 
-  min-height: 90px;
+  min-height: 80px;
   width: 100%;
 
   display: flex;
@@ -71,7 +71,7 @@
 
  justify-content:center;
 
- gap:20px;
+ gap:10px;
 
  flex:1;
 
