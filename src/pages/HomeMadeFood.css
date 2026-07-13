@@ -1,0 +1,646 @@
+.homemade-page {
+  background: #2a1d26;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* HERO SECTION */
+
+.homemade-hero {
+  width: 100%;
+  height: 320px;
+
+  background: url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.homemade-hero .overlay {
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 20px;
+}
+
+.homemade-hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.homemade-hero p {
+  font-size: 18px;
+  max-width: 700px;
+}
+
+/* SEARCH BAR */
+
+.hero-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  padding: 10px;
+
+  border-radius: 14px;
+
+  max-width: 650px;
+  width: 90%;
+
+  margin: 20px auto 0;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-search input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  padding: 14px 16px;
+
+  font-size: 16px;
+
+  border-radius: 10px;
+}
+
+.hero-search button {
+  background: #ff7a00;
+  color: white;
+
+  border: none;
+
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.hero-search button:hover {
+  background: #e66a00;
+}
+
+/* CATEGORY BUTTONS */
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  padding: 30px 20px 10px;
+}
+
+.category-buttons button {
+  padding: 10px 22px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #f3bfd9;
+
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.category-buttons button:hover,
+.category-buttons button.active {
+  background: #ff7a00;
+  color: white;
+}
+
+/* TOP BUTTONS */
+
+.top-buttons {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  margin: 30px 0;
+}
+
+.top-btn {
+  padding: 14px 26px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #ff7a00;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.top-btn:hover {
+  background: #ff9500;
+}
+
+/* FOOD GRID */
+
+.food-grid {
+  width: 95%;
+
+  margin: 50px auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+/* FOOD CARD */
+
+.food-card {
+  width: 100%;
+
+  min-width: 0;
+
+  background: #1a0318;
+
+  border-radius: 24px;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 20px rgba(200, 97, 97, 0.3);
+
+  transition: 0.3s ease;
+
+  min-height: 650px;
+}
+
+.food-card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE */
+
+.food-image-wrapper {
+  width: 100%;
+
+  height: 220px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.homemade-food-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* WISHLIST BUTTON */
+
+.wishlist-btn {
+  position: absolute;
+
+  top: 3px;
+  left: 7px;
+
+  /* width: 48px;
+  height: 48px; */
+
+  border: none;
+
+  border-radius: 14px;
+/* 
+  background: rgba(71, 33, 20, 0.9); */
+
+  color: #ff4d88;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  z-index: 10;
+}
+
+/* CONTENT */
+
+.food-contents {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 20px;
+}
+
+.food-contents h3 {
+  margin-bottom: 14px;
+
+  font-size: 22px;
+
+  color: white;
+
+  line-height: 1.4;
+}
+
+.food-description {
+  font-size: 16px;
+
+  color: #f2e8e8;
+
+  line-height: 1.7;
+
+  margin-bottom: 18px;
+
+  min-height: 70px;
+}
+
+/* DETAILS */
+
+.food-details {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  font-size: 16px;
+
+  color: #f3eeee;
+}
+
+/* PRICE + BUTTONS */
+
+.food-price-row {
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  padding-top: 25px;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.price {
+  font-size: 40px;
+
+  font-weight: 800;
+
+  color: #ff6b35;
+}
+
+.original-price {
+  font-size: 22px;
+
+  color: #999;
+
+  text-decoration: line-through;
+}
+
+/* BUTTONS */
+
+.cart-btn,
+.order-btn {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #6a3c26;
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.cart-btn:hover,
+.order-btn:hover {
+  background: #ff7a00;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-card {
+    min-height: auto;
+  }
+
+  .homemade-hero h1 {
+    font-size: 34px;
+  }
+
+  .homemade-hero p {
+    font-size: 15px;
+  }
+
+  .hero-search {
+    flex-direction: column;
+  }
+
+  .hero-search button {
+    width: 100%;
+  }
+}
+/* Modal Container */
+.homemade-modal {
+  width: 90%;
+  max-width: 900px;
+  height: 85vh;
+  overflow-y: auto;
+
+  padding: 25px;
+
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: white;
+}
+
+/* Form Section */
+.homemade-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Labels */
+.homemade-form label {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-top: 5px;
+}
+
+/* Inputs */
+.homemade-form input,
+.homemade-form select {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 12px;
+
+  padding: 0 15px;
+
+  font-size: 16px;
+
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Buttons */
+.location-btn,
+.search-location-btn,
+.pay-btn {
+  width: 100%;
+  height: 52px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* Current Location */
+.location-btn {
+  background: #ff9800;
+  color: white;
+}
+
+/* Search Location */
+.search-location-btn {
+  background: #ff9800;
+  color: white;
+}
+
+/* Pay Button */
+.pay-btn {
+  background: #d97a21;
+  color: white;
+  margin-top: 15px;
+}
+
+.location-btn:hover,
+.search-location-btn:hover,
+.pay-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Map */
+.map-container {
+  height: 280px;
+  width: 100%;
+
+  margin-top: 10px;
+
+  border-radius: 15px;
+  overflow: hidden;
+
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+/* Total Amount */
+.total-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffb300;
+  margin-top: 10px;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  font-size: 40px;
+  color: white;
+
+  cursor: pointer;
+}
+
+/* Scrollbar */
+.homemade-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.homemade-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.homemade-modal::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 20px;
+}
+/* All Inputs */
+.booking-modal input,
+.booking-modal select {
+  width: 100%;
+  height: 55px;
+
+  padding: 0 18px;
+
+  font-size: 17px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.95);
+
+  box-sizing: border-box;
+
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+/* Location Search Input */
+.booking-modal input[type="text"] {
+  height: 55px;
+  font-size: 17px;
+}
+
+/* Date Input */
+.booking-modal input[type="date"] {
+  height: 55px;
+  font-size: 17px;
+}
+
+/* Labels */
+.booking-modal label {
+  display: block;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  color: white;
+
+  margin-bottom: 6px;
+}
+
+.toast-message{
+    position:fixed;
+    top:25px;
+    right:25px;
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+
+    color:#fff;
+
+    padding:16px 28px;
+
+    border-radius:15px;
+
+    font-size:18px;
+    font-weight:600;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    z-index:99999;
+
+    animation:slideIn .4s ease;
+}
+
+@keyframes slideIn{
+
+    from{
+        opacity:0;
+        transform:translateX(100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}

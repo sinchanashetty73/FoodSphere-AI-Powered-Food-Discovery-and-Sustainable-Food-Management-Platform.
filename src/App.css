@@ -1,0 +1,1170 @@
+/* ===============================
+   GLOBAL RESPONSIVE FIX
+================================ */
+
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+}
+
+
+/* ===============================
+        ABOUT PAGE MOBILE
+================================ */
+
+@media(max-width:768px){
+
+.about-page{
+  width:100%;
+}
+
+
+.about-box{
+    width:95%;
+    overflow:hidden;
+}
+
+
+.about-hero{
+  height:220px;
+  background-position:center;
+  text-align:center;
+}
+
+
+.about-hero h1{
+  font-size:35px;
+}
+
+
+.about-intro{
+  padding:20px 10px;
+}
+
+
+.video-box{
+  width:100%;
+}
+
+
+.features-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    width:100%;
+    gap:20px;
+
+
+
+.feature-cards{
+    width:100% !important;
+}
+
+
+.mission{
+  margin:20px 10px;
+}
+
+
+.chef-grid{
+    grid-template-columns:1fr !important;
+}
+
+
+.chef-card img{
+  height:auto;
+}
+
+}
+h1{
+    font-size:35px;
+}
+
+
+h2{
+    font-size:28px;
+}
+
+
+p{
+    word-wrap:break-word;
+}
+
+
+/* REMOVE SIDE SCROLL */
+
+body{
+    overflow-x:hidden;
+}
+
+
+}
+
+
+
+/* ===============================
+       CONTACT PAGE MOBILE
+================================ */
+
+
+@media(max-width:768px){
+
+
+.contact-page{
+ width:100%;
+}
+
+
+.contact-hero{
+ height:300px;
+ background-position:center;
+}
+
+
+.contact-hero h1{
+ font-size:35px;
+ text-align:center;
+}
+
+
+.contact-container{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    padding:20px !important;
+    overflow:hidden;
+}
+
+
+.contact-left,
+.contact-right{
+
+ width:100% !important;
+
+}
+
+
+.row{
+
+ flex-direction:column;
+
+}
+
+
+.contact-right input,
+.contact-right textarea{
+
+ width:100% !important;
+
+}
+
+
+.contact-right button{
+
+ width:100%;
+
+}
+
+
+.reserve{
+
+ min-height:400px;
+
+ padding:20px;
+
+}
+
+
+.reserve h2{
+
+ font-size:28px;
+
+}
+.contact-right form{
+    width:100%;
+}
+
+
+
+.glass-box{
+    width:100% !important;
+    padding:20px !important;
+}
+
+
+.footer-socials{
+
+ flex-wrap:wrap;
+
+}
+
+}
+
+
+
+/* ===============================
+        DONATE PAGE MOBILE
+================================ */
+
+
+@media(max-width:768px){
+
+
+.donate-page{
+    width:100% !important;
+    padding:15px !important;
+    overflow-x:hidden !important;
+}
+
+
+.hero{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    padding:20px !important;
+}
+
+
+
+.hero-image{
+
+ width:100%;
+
+ height:auto;
+
+}
+.hero-content{
+    width:100% !important;
+}
+
+
+
+.stats{
+ display:flex !important;
+ flex-direction:column !important;
+
+ gap:20px !important;
+
+ text-align:center;
+
+}
+
+
+.card-grid{
+
+ grid-template-columns:1fr;
+
+}
+
+
+.image-box{
+    width:100% !important;
+    height:auto !important;
+}
+
+.image-box img{
+
+    width:100% !important;
+
+    height:auto !important;
+
+}
+
+.donation-form-section{
+
+    width:100% !important;
+
+}
+
+
+.donate-input{
+
+  flex-direction:column !important;
+
+}
+
+
+.donate-input input,
+.donate-input button{
+
+  width:100% !important;
+
+}
+
+
+.donation-types{
+display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:20px !important;
+}
+
+
+.impact-grid{
+
+ grid-template-columns:1fr;
+
+}
+
+
+.testimonials-section{
+
+ padding:20px;
+
+}
+
+
+.feedback-user{
+
+ flex-direction:column;
+
+ text-align:center;
+
+}
+
+
+.feedback-user img{
+
+ margin-right:0;
+
+ margin-bottom:10px;
+
+}
+
+.tracking-section{
+
+    padding:15px !important;
+
+}
+
+
+.tracking-info{
+
+  flex-direction:column !important;
+
+ gap:15px;
+
+}
+
+
+.tracking-card{
+
+    width:100% !important;
+
+    padding:20px !important;
+
+}
+
+.tracking-header{
+
+ flex-direction:column !important;
+
+    align-items:flex-start !important;
+
+ gap:15px;
+
+}
+
+
+
+
+.timeline-labels{
+
+ font-size:10px;
+
+}
+
+.type-card{
+    width:100% !important;
+    padding:25px !important;
+}
+.modal-box{
+
+ width:95%;
+
+ padding:20px;
+
+}
+
+.timeline{
+
+    width:100%;
+
+}
+
+
+.donation-form-section h2{
+
+ font-size:28px;
+
+ text-align:center;
+
+}
+
+
+.donate-page h1{
+
+ text-align:center;
+
+}
+
+.donation-card{
+
+    width:100% !important;
+
+}
+.step{
+
+    width:35px !important;
+
+    height:35px !important;
+
+    font-size:14px;
+
+}
+.timeline-labels{
+
+    font-size:11px !important;
+
+    gap:5px;
+
+}
+/* Buttons overflow */
+
+.location,
+.status-badge,
+.type-card span{
+
+    max-width:100%;
+
+    white-space:normal;
+
+}
+
+
+
+/* Text */
+
+h1{
+    font-size:32px !important;
+}
+
+
+h2{
+    font-size:26px !important;
+}
+
+
+p{
+    line-height:1.5;
+}
+
+
+
+/* remove side scroll */
+
+body{
+    overflow-x:hidden !important;
+}
+
+}
+
+
+
+/* restaurants */
+.restaurant-grid,
+.food-grid,
+.night-grid,
+.donation-grid {
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(260px,1fr)
+);
+
+gap:25px;
+
+width:100%;
+}
+@media(max-width:768px){
+
+.add-food-card,
+.add-night-card,
+.add-restaurant-card,
+.form-container{
+
+width:95%;
+padding:20px;
+
+}
+
+
+input,
+textarea,
+button{
+
+width:100%;
+
+}
+
+}
+img{
+max-width:100%;
+height:auto;
+}
+
+/* ==================================
+      ADMIN RESPONSIVE FINAL FIX
+================================== */
+
+
+@media(max-width:768px){
+
+
+/* MAIN NAVBAR */
+
+.admin-navbar{
+
+    width:100% !important;
+
+    min-height:auto !important;
+
+    display:flex !important;
+
+    flex-direction:column !important;
+
+    justify-content:center !important;
+
+    align-items:center !important;
+
+    gap:18px !important;
+
+    padding:25px 10px !important;
+
+}
+
+
+/* LOGO */
+
+.admin-navbar img{
+
+    width:80px !important;
+
+    height:80px !important;
+
+    object-fit:cover;
+
+}
+
+
+/* TITLE */
+
+.admin-navbar h1,
+.admin-title{
+
+    width:100% !important;
+
+    text-align:center !important;
+
+    font-size:28px !important;
+
+    margin:0 !important;
+
+}
+
+
+
+/* ======================
+      LINKS FIX
+====================== */
+
+
+.admin-navbar a,
+.admin-navbar .nav-link,
+.admin-navbar .active{
+
+
+    width:90% !important;
+
+
+    display:block !important;
+
+
+    text-align:center !important;
+
+
+    font-size:20px !important;
+
+
+    padding:12px 0 !important;
+
+
+    margin:0 auto !important;
+
+
+    white-space:normal !important;
+
+
+}
+
+
+
+/* remove underline */
+
+.admin-navbar a::after{
+
+    display:none !important;
+
+}
+
+
+/* force link container column */
+
+.admin-navbar div{
+
+    display:flex !important;
+
+    flex-direction:column !important;
+
+    justify-content:center !important;
+
+    align-items:center !important;
+
+    gap:15px !important;
+
+}
+
+
+
+/* LOGOUT BUTTON */
+
+.logout-btn,
+.admin-navbar button{
+
+
+    width:180px !important;
+
+    height:50px !important;
+
+
+    margin-top:15px !important;
+
+
+}
+
+
+/* ======================
+      ADMIN PAGES
+====================== */
+
+
+.admin-dashboard,
+.restaurant-admin,
+.homefood-admin,
+.night-admin{
+
+
+    width:100% !important;
+
+
+    padding:15px !important;
+
+
+}
+
+
+
+/* HEADER */
+
+
+.restaurant-header,
+.homefood-header,
+.night-header{
+
+
+    text-align:center !important;
+
+
+}
+
+
+
+.restaurant-header h1,
+.homefood-header h1,
+.night-header h1{
+
+
+    font-size:30px !important;
+
+
+}
+
+
+
+/* FORM CARDS */
+
+.add-food-card,
+.add-night-card,
+.add-restaurant-card{
+
+
+    width:100% !important;
+
+
+    padding:20px !important;
+
+
+}
+
+
+
+/* INPUT */
+
+input,
+textarea{
+
+
+    width:100% !important;
+
+
+}
+
+
+
+/* GRID */
+
+.restaurant-grid,
+.food-grid,
+.night-grid{
+
+
+    display:grid !important;
+
+
+    grid-template-columns:1fr !important;
+
+
+    gap:20px !important;
+
+
+}
+
+
+
+/* CARDS */
+
+.restaurant-card,
+.food-card,
+.night-card{
+
+
+    width:100% !important;
+
+
+}
+
+
+/* IMAGES */
+
+.restaurant-card img,
+.food-card img,
+.night-card img{
+
+
+    width:100% !important;
+
+    height:auto !important;
+
+
+}
+
+
+/* MODAL */
+
+
+.edit-modal{
+
+
+    width:90% !important;
+
+
+}
+
+
+
+/* REMOVE OVERFLOW */
+
+
+html,
+body{
+
+
+    overflow-x:hidden !important;
+
+
+}
+
+
+*{
+
+    box-sizing:border-box;
+
+}
+
+
+}
+
+/* =====================================
+   ADMIN RESTAURANT + DONATION MOBILE FIX
+===================================== */
+
+@media(max-width:768px){
+
+
+/* ---------- RESTAURANT ADMIN ---------- */
+
+
+.restaurant-admin{
+
+    width:100% !important;
+
+    overflow:hidden !important;
+
+}
+
+
+/* stats cards */
+
+.stats,
+.admin-stats,
+.restaurant-stats{
+
+
+    width:100% !important;
+
+
+    display:grid !important;
+
+
+    grid-template-columns:1fr !important;
+
+
+    gap:20px !important;
+
+
+    padding:15px !important;
+
+
+}
+
+
+.stat-card{
+
+
+    width:100% !important;
+
+
+    margin:auto !important;
+
+
+}
+
+
+
+/* restaurant form */
+
+.restaurant-form,
+.add-restaurant,
+.add-form{
+
+
+    width:100% !important;
+
+
+    padding:20px !important;
+
+
+}
+
+
+.restaurant-form input,
+.restaurant-form textarea{
+
+
+    width:100% !important;
+
+
+}
+
+
+
+/* restaurant cards */
+
+
+.restaurant-list,
+.restaurant-grid{
+
+
+    display:grid !important;
+
+
+    grid-template-columns:1fr !important;
+
+
+    gap:20px !important;
+
+
+}
+
+
+.restaurant-card{
+
+
+    width:100% !important;
+
+    padding:20px !important;
+
+}
+
+
+/* ---------- FOOD ITEMS ---------- */
+
+
+.food-items,
+.food-list{
+
+
+    display:grid !important;
+
+    grid-template-columns:1fr !important;
+
+    gap:20px !important;
+
+
+}
+
+
+.food-item,
+.food-card{
+
+
+    width:100% !important;
+
+
+    display:flex !important;
+
+
+    flex-direction:column !important;
+
+
+    align-items:center !important;
+
+
+}
+
+
+.food-card img,
+.food-item img{
+
+
+    width:150px !important;
+
+    height:150px !important;
+
+    object-fit:cover;
+
+}
+
+
+/* ---------- DONATION ADMIN ---------- */
+
+
+.donation-admin{
+
+
+    width:100% !important;
+
+    padding:15px !important;
+
+
+}
+
+
+.donation-card,
+.admin-donation-card{
+
+
+    width:100% !important;
+
+
+    padding:25px !important;
+
+
+    margin-bottom:25px !important;
+
+
+}
+
+
+
+/* button overlap fix */
+
+.donation-card button,
+.admin-donation-card button{
+
+
+    width:100% !important;
+
+
+    height:50px !important;
+
+
+    display:block !important;
+
+
+    margin:12px 0 !important;
+
+
+    border-radius:12px !important;
+
+
+}
+
+
+
+/* button container */
+
+.donation-actions,
+.status-buttons{
+
+
+    display:flex !important;
+
+
+    flex-direction:column !important;
+
+
+    gap:15px !important;
+
+
+}
+
+
+/* text fix */
+
+
+.donation-card h2,
+.donation-card h3,
+.donation-card p{
+
+
+    word-break:break-word !important;
+
+
+}
+
+
+/* prevent right side cutting */
+
+
+*{
+
+    max-width:100% !important;
+
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    overflow-x:hidden !important;
+
+}
+
+
+
+}
+
+/* ==============================
+   ADMIN DONATION BUTTON GAP FIX
+============================== */
+
+@media(max-width:768px){
+
+  .admin-donation-card button,
+.donation-card button{
+
+    width:100% !important;
+
+    min-height:45px !important;
+
+    height:auto !important;
+
+    margin:0 0 18px 0 !important;
+
+    display:flex !important;
+
+    justify-content:center !important;
+
+    align-items:center !important;
+
+    border-radius:12px !important;
+
+}
+
+.admin-donation-card,
+.donation-card{
+
+    width:100% !important;
+
+    padding:25px !important;
+
+    border-radius:20px !important;
+
+    margin-bottom:30px !important;
+
+}
+
+  .donation-card button:last-child,
+  .admin-donation-card button:last-child{
+
+      margin-bottom:0 !important;
+
+  }
+
+.admin-donation-card div,
+.donation-card div{
+
+    gap:15px;
+
+}
+
+
+
+
+  /* if buttons are inside div */
+  .donation-actions,
+  .status-buttons{
+
+      display:flex !important;
+
+      flex-direction:column !important;
+
+      gap:15px !important;
+
+      width:100% !important;
+
+  }
+
+}

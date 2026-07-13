@@ -1,0 +1,350 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================================
+   ANIMATED BACKGROUND
+=================================== */
+/* ===============================
+   AESTHETIC ANIMATED BACKGROUND
+=============================== */
+.login-wrapper {
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    -45deg,
+    #8b0d14,
+    #b3122a,
+    #ff416c,
+    #5a0810,
+    #ff4b2b
+  );
+
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+/* Smooth gradient movement */
+@keyframes gradientFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===================================
+   MAIN CONTAINER
+=================================== */
+.login-container {
+  width: 1000px;
+  height: 700px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* ===================================
+   LEFT IMAGE SECTION
+=================================== */
+.image-section {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* IMAGE SLIDER */
+.slider-image {
+  width: 99%;
+  height: 100%;
+  object-fit: cover;          /* FULL FIT */
+  object-position: center;
+  display: block;
+
+  animation: fadeZoom 1.2s ease-in-out;
+}
+
+/* Smooth animation when image changes */
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hover zoom effect */
+.image-section:hover .slider-image {
+  transform: scale(1.05);
+  transition: transform 0.8s ease;
+}
+
+/* ===================================
+   RIGHT FORM SECTION
+=================================== */
+.form-section {
+  width: 50%;
+  padding: 20px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-section h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #000;
+}
+
+.form-section p {
+  color: #666;
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+/* INPUTS */
+.form-section input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #eef2fa;
+  font-size: 15px;
+  outline: none;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  width: 100%;
+  padding: 13px;
+  background: #7f6f73;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #65585b;
+}
+
+/* OR TEXT */
+.or-text {
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* SOCIAL BUTTONS */
+.social-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+gap:5px;
+margin-top:10px;
+
+
+
+}
+
+
+/* Common Button */
+
+.social-buttons button{
+
+width:100%;
+
+height:45px;
+
+border:none;
+
+border-radius:5px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:9px;
+
+font-size:15px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:0.3s ease;
+
+}
+
+
+/* Google */
+
+.google-btn{
+
+background:white;
+
+color:#444;
+
+box-shadow:
+0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+
+/* Facebook */
+
+.facebook-btn{
+
+background:#1877F2;
+
+color:white;
+
+box-shadow:
+0 8px 25px rgba(24,119,242,0.4);
+
+}
+
+
+
+.social-icon{
+
+font-size:22px;
+
+}
+
+
+.facebook-icon{
+
+color:white;
+
+}
+
+
+
+/* Hover Effects */
+
+.google-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+0 12px 30px rgba(255,255,255,0.4);
+
+}
+
+
+
+.facebook-btn:hover{
+
+transform:translateY(-5px);
+
+background:#0d65d9;
+
+box-shadow:
+0 12px 35px rgba(24,119,242,0.8);
+
+}
+
+/* ICON SIZE */
+.icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* SIGNUP TEXT */
+.signup-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.signup-text a {
+  color: #d1003f;
+  text-decoration: none;
+  font-weight: bold;
+}
+.icon{
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+@media (max-width: 900px) {
+
+  .login-container {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .image-section {
+    width: 100%;
+    height: 280px;
+  }
+
+  .form-section {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* TO chnge into signup page */
+.signup-link {
+  color: #ff4d6d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+/* login option */
+.role-selection{
+  display:flex;
+  gap:15px;
+  margin:20px 0;
+}
+
+.role-card{
+  flex:1;
+  padding:15px;
+  text-align:center;
+  border-radius:15px;
+  cursor:pointer;
+  background:#f2f2f2;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.role-card:hover{
+  transform:translateY(-2px);
+}
+
+.role-card.active{
+  background:#ff6b35;
+  color:white;
+}

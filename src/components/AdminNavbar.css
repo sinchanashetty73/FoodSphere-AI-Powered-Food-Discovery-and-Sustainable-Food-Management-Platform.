@@ -1,0 +1,297 @@
+.admin-navbar{
+
+position:sticky;
+top:0;
+z-index:999;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 45px;
+
+background:rgba(133, 115, 152, 0.88);
+
+backdrop-filter:blur(18px);
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+/* LOGO */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+font-size:32px;
+
+font-weight:900;
+
+color:rgba(49, 4, 4, 0.936);
+
+
+}
+
+
+
+.logo-img{
+
+width:85px;
+
+height:85px;
+
+border-radius:15px;
+
+object-fit:cover;
+
+
+
+padding:5px;
+/* 
+box-shadow:
+0 8px 25px rgba(0,0,0,0.3); */
+
+}
+
+.logo:hover{
+
+transform:scale(1.05);
+
+}
+
+.logo span{
+
+font-size:30px;
+
+}
+
+/* NAV */
+
+.admin-nav-center{
+
+display:flex;
+
+gap:25px;
+
+}
+
+.admin-nav-item{
+
+position:relative;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:bold;
+font-size: 25px;
+
+padding:10px 0;
+
+transition:.35s;
+
+
+}
+
+.admin-nav-item:hover{
+
+color:#d185be;
+
+}
+
+.admin-nav-item::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:0;
+
+height:3px;
+
+background:#22C55E;
+
+border-radius:10px;
+
+transition:.35s;
+
+}
+
+.admin-nav-item:hover::after{
+
+width:100%;
+
+}
+
+.admin-nav-item.active{
+
+color:#22C55E;
+
+}
+
+.admin-nav-item.active::after{
+
+width:100%;
+
+}
+
+/* SEARCH */
+
+.nav-right{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+.search-box{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:12px 18px;
+
+background:white;
+
+border-radius:40px;
+
+width:280px;
+
+transition:.35s;
+
+}
+
+.search-box:hover{
+
+box-shadow:0 0 18px rgba(34,197,94,.4);
+
+transform:translateY(-2px);
+
+}
+
+.search-box input{
+
+border:none;
+
+outline:none;
+
+width:100%;
+
+font-size:15px;
+
+}
+
+/* BELL */
+
+.notification{
+
+position:relative;
+
+cursor:pointer;
+
+padding:10px;
+
+border-radius:50%;
+
+transition:.35s;
+
+color:white;
+
+}
+
+.notification:hover{
+
+background:#22C55E;
+
+transform:rotate(12deg);
+
+}
+
+.badge{
+
+position:absolute;
+
+top:0;
+
+right:0;
+
+width:20px;
+
+height:20px;
+
+border-radius:50%;
+
+background:#EF4444;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:11px;
+
+font-weight:bold;
+
+color:white;
+
+}
+
+/* PROFILE */
+
+.admin-avatar{
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+border:3px solid #22C55E;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.admin-avatar:hover{
+
+transform:scale(1.1) rotate(6deg);
+
+box-shadow:0 0 15px rgba(34,197,94,.45);
+
+}
+.admin-logout-btn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.logout-btn:hover{
+    background:#dc2626;
+    transform:translateY(-3px);
+}

@@ -1,0 +1,297 @@
+.night-admin{
+  min-height:100vh;
+  background:rgb(35, 26, 32);
+  padding:40px;
+  color:white;
+}
+
+.night-header{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.night-header h1{
+  font-size:42px;
+  color:#ffb347;
+}
+
+.add-night-card{
+  background:#1a0318;
+  padding:30px;
+  border-radius:20px;
+  margin-bottom:40px;
+}
+
+.add-night-card h2{
+  margin-bottom:20px;
+}
+
+.add-night-card input{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border:none;
+  border-radius:10px;
+}
+
+.add-night-card button{
+  width:100%;
+  padding:15px;
+  background:#ff7b31;
+  color:white;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.night-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:25px;
+}
+
+.night-card{
+  background:#1a0318;
+  border-radius:20px;
+  overflow:hidden;
+  padding:20px;
+}
+
+.night-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.night-card h3{
+  margin-top:15px;
+  color:#ffb347;
+}
+
+.night-actions{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+}
+
+.edit-btn{
+  flex:1;
+  background:#3498db;
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:8px;
+}
+
+.save-btn{
+  flex:1;
+  background:#2ecc71;
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:8px;
+}
+
+.delete-btn{
+  flex:1;
+  background:#e74c3c;
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:8px;
+}
+
+.modal-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+z-index:999;
+}
+
+
+.edit-modal{
+
+width:450px;
+
+/* decrease height */
+height:650px;
+
+/* scroll only inside modal */
+overflow-y:auto;
+
+background:
+rgba(255,255,255,0.15);
+
+backdrop-filter:blur(25px);
+
+border-radius:25px;
+
+padding:25px;
+
+box-shadow:
+0 20px 50px black;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+
+.edit-modal h2{
+
+color:white;
+text-align:center;
+
+}
+
+
+.edit-modal input{
+
+height:38px;
+
+border:none;
+
+border-radius:12px;
+
+padding:8px 15px;
+
+font-size:15px;
+
+}
+
+
+.preview-img{
+
+width:180px;
+
+height:120px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+margin:auto;
+
+}
+
+
+.modal-buttons{
+
+display:flex;
+
+gap:15px;
+
+margin-top:10px;
+
+}
+
+
+.modal-buttons button{
+
+height:40px;
+
+font-size:15px;
+
+}
+
+
+.modal-buttons button{
+
+flex:1;
+
+height:45px;
+
+border:none;
+
+border-radius:15px;
+
+cursor:pointer;
+
+font-weight:15px;
+
+}
+.edit-modal{
+
+position:relative;
+
+width:450px;
+height:650px;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(25px);
+
+border-radius:25px;
+
+padding:25px;
+
+}
+
+
+/* X close button */
+
+.modal-close{
+
+position:absolute;
+
+top:15px;
+
+right:20px;
+
+
+width:35px;
+
+height:35px;
+
+
+border:none;
+
+border-radius:50%;
+
+
+background:#ff3b3b;
+
+color:white;
+
+
+font-size:25px;
+
+font-weight:bold;
+
+
+cursor:pointer;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+transition:0.3s;
+
+}
+
+
+.modal-close:hover{
+
+background:red;
+
+transform:rotate(90deg) scale(1.1);
+
+}

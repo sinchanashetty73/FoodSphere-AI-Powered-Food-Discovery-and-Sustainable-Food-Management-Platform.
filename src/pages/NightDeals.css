@@ -1,0 +1,504 @@
+.home .hero {
+  background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 60px 8%;
+}
+
+.home .hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  border-radius: 26px;
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+.home .hero-overlay h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.home .hero-overlay p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  max-width: 900px;
+}
+
+.home .search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home .search-box input {
+  width: 70%;
+  max-width: 520px;
+  padding: 16px 18px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.home .search-box button {
+  padding: 16px 26px;
+  border: none;
+  background-color: #ff7a00;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.notify-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.home .search-box button:hover {
+  background-color: #e56d00;
+}
+
+.hero-overlay p {
+  font-size: 24px;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  color: #f2f2f2;
+  max-width: 1200px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  width: 460px;
+  max-width: 100%;
+  height: 52px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0 18px;
+  font-size: 18px;
+  background: #ffffff;
+  color: #222222;
+}
+
+.search-box button {
+  height: 52px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 5px;
+  background: #ff7a00;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #e46e00;
+}
+
+.home .categories-section {
+  padding: 60px 8%;
+  text-align: center;
+}
+.home .category-btn.active {
+  background-color: #ff7a00;
+  color: white;
+}
+.home .categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.categories-section h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.category-btn {
+  border: none;
+  align-items: center;
+  justify-content: center;
+  background: #f3bfd9;
+  color: #4a1f2d;
+  padding: 12px 22px;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.category-btn:hover {
+  background: #ebb0ce;
+}
+
+.featured-section {
+  padding: 10px 40px 50px;
+  background: #2b1e2a;
+}
+
+.featured-section h2 {
+  font-size: 52px;
+  margin-bottom: 28px;
+  color: #ffffff;
+}
+
+.deals-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.deal-card {
+  width: 100%;
+  background: #1a0318;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.deal-image {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+   
+}
+
+.deal-content {
+  padding: 22px;
+}
+
+.deal-content h3 {
+  font-size: 28px;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.item-name {
+  font-size: 30px;
+ padding: 10px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color:goldenrod;
+}
+
+.item-time{
+ padding: 10px;
+ font-size: 18px;
+
+}
+
+.price {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.price span {
+  color: #ff9b3d;
+  font-weight: 700;
+}
+
+.arrow {
+  color: #ffffff;
+}
+
+.deal-content p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f2f2f2;
+}
+
+.order-btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  background: #ff7a00;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 14px;
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  background: #e46e00;
+}
+
+.how-it-works,
+.why-choose-us,
+.cta-section {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .hero-overlay h1 {
+    font-size: 44px;
+  }
+
+  .hero-overlay p {
+    font-size: 20px;
+  }
+
+  .categories-section h2,
+  .featured-section h2 {
+    font-size: 40px;
+  }
+
+  .deals-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .categories-section,
+  .featured-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 34px;
+  }
+
+  .hero-overlay p {
+    font-size: 17px;
+  }
+
+  .categories-section h2,
+  .featured-section h2 {
+    font-size: 30px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  .deals-container {
+    grid-template-columns: 1fr;
+  }
+
+  .deal-image {
+    height: 240px;
+  }
+}
+
+.booking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.booking-modal {
+  width: 900px;
+  max-width: 95%;
+  height: 650px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  position: relative;
+
+  overflow-y: auto;
+
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+.booking-layout {
+  display: grid;
+
+  grid-template-columns: 40% 60%;
+
+  gap: 25px;
+
+  height: 100%;
+}
+
+.booking-left {
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+}
+
+.booking-image {
+  width: 100%;
+  height: 250px;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  margin-bottom: 15px;
+}
+
+.booking-left h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.booking-left p {
+  margin: 10px 0;
+  font-size: 17px;
+}
+
+.booking-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booking-right label {
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.booking-right input,
+.booking-right select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.location-btn,
+.search-location-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #ff9800;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.location-btn:hover,
+.search-location-btn:hover {
+  background: #e68900;
+}
+
+.location-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.location-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.location-buttons button {
+  flex: 1;
+}
+.map-box {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #ff9800;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  background: #e68900;
+}
+
+.close-btn {
+  position: absolute;
+
+  top: 15px;
+  right: 20px;
+
+  font-size: 30px;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: bold;
+}
