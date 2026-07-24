@@ -65,7 +65,7 @@ const [password, setPassword] = useState("");
 
       {/* Left Content */}
       <div className="left-section">
-        <h1>It's time to boost your creativity</h1>
+        <h1>Welcome!! Start your food sharing journey today🚀</h1>
 
         <div className="signin-box">
           <p>Here you are</p>
