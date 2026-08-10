@@ -13,9 +13,9 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy.WithOrigins(
-                "http://localhost:3000",
-                "https://frontend-dtw6.onrender.com"
-            )
+    "http://localhost:3000",
+    "https://frontend-dtw6.onrender.com"
+)
             .AllowAnyHeader()
             .AllowAnyMethod();
         });
