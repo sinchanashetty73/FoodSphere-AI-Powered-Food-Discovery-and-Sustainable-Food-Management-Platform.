@@ -4,7 +4,16 @@ using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
 using LeftoverFood.API.Services;
 
-var builder = WebApplication.CreateBuilder(args);
+Environment.SetEnvironmentVariable(
+    "DOTNET_USE_POLLING_FILE_WATCHER",
+    "true"
+);
+
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    Args = args,
+    EnvironmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")
+});
 
 // CORS
 builder.Services.AddCors(options =>
