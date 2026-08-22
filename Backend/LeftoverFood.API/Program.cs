@@ -100,6 +100,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// app.MapGet("/", () => "FoodSphere API is running!");
+app.MapGet("/", () => "FoodSphere API is running!");
 
 app.Run();
